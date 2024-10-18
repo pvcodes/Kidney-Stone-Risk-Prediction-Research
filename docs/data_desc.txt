@@ -1,0 +1,2513 @@
+RIAGENDR - Gender
+---------------------------------------
+Variable Name:     RIAGENDR
+SAS Label:         Gender
+English Text:      Gender of the participant.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Male                     
+2                  Female                   
+.                  Missing                  
+
+---------------------------------------
+
+RIDAGEYR - Age in years at screening
+---------------------------------------
+Variable Name:     RIDAGEYR
+SAS Label:         Age in years at screening
+English Text:      Age in years of the participant at the time of screening. Individuals 80 and over are topcoded at 80 years of age.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 79            Range of Values          
+80                 80 years of age and over 
+.                  Missing                  
+
+---------------------------------------
+
+RIDRETH3 - Race/Hispanic origin w/ NH Asian
+-------------------------------------------
+Variable Name:     RIDRETH3
+SAS Label:         Race/Hispanic origin w/ NH Asian
+English Text:      Recode of reported race and Hispanic origin information, with Non-Hispanic Asian Category.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Mexican American                                 
+2                  Other Hispanic                                   
+3                  Non-Hispanic White                               
+4                  Non-Hispanic Black                               
+6                  Non-Hispanic Asian                               
+7                  Other Race - Including Multi-Racial              
+.                  Missing                                          
+
+-------------------------------------------
+
+DMDEDUC2 - Education level - Adults 20+
+---------------------------------------
+Variable Name:     DMDEDUC2
+SAS Label:         Education level - Adults 20+
+English Text:      What is the highest grade or level of school {you have/SP has} completed or the highest degree {you have/s/he has} received?
+English Instructions: HAND CARD DMQ1 READ HAND CARD CATEGORIES IF NECESSARY ENTER HIGHEST LEVEL OF SCHOOL
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Less than 9th grade      
+2                  9-11th grade (Includes 12th grade with no diploma)
+3                  High school graduate/GED or equivalent
+4                  Some college or AA degree
+5                  College graduate or above
+7                  Refused                  
+9                  Don't Know               
+.                  Missing                  
+
+---------------------------------------
+
+DMDMARTZ - Marital status
+---------------------------------------
+Variable Name:     DMDMARTZ
+SAS Label:         Marital status
+English Text:      Marital status
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Married/Living with Partner
+2                  Widowed/Divorced/Separated
+3                  Never married            
+77                 Refused                  
+99                 Don't Know               
+.                  Missing                  
+
+---------------------------------------
+
+INDFMPIR - Ratio of family income to poverty
+---------------------------------------
+Variable Name:     INDFMPIR
+SAS Label:         Ratio of family income to poverty
+English Text:      A ratio of family income to poverty guidelines.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 4.98          Range of Values          
+5                  Value greater than or equal to 5.00
+.                  Missing                  
+
+---------------------------------------
+
+DBQ095Z - Type of table salt used
+---------------------------------------
+Variable Name:     DBQ095Z
+SAS Label:         Type of table salt used
+English Text:      What type of salt {do you/does SP} usually add to {your/his/her/SP's} food at the table? Would you say . . .
+English Instructions: CAPI INSTRUCTION: IF SP AGE <= 5, DISPLAY "DO YOU" FOR FIRST DISPLAY AND {SP'S} FOR SECOND DISPLAY.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Ordinary salt [includes regular iodized salt, sea salt and seasoning salts made with regular salt]
+2                  Lite salt                
+3                  Salt substitute          
+4                  Doesn't use or add salt products at the table
+9                 Other                    
+99                 Don't Know               
+.                  Missing                  
+
+---------------------------------------
+
+DBD100 - How often add salt to food at table
+---------------------------------------
+Variable Name:     DBD100
+SAS Label:         How often add salt to food at table
+English Text:      How often {do you/does SP} add this salt to {your/his/her/SP's} food at the table? Would you say . . .
+English Instructions: CAPI INSTRUCTION: IF SP AGE <= 5, DISPLAY "DO YOU" FOR FIRST DISPLAY AND {SP'S} FOR SECOND DISPLAY.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Rarely                   
+2                  Occasionally             
+3                  Very often               
+7                  Refused                  
+9                  Don't Know               
+.                  Missing                  
+
+---------------------------------------
+
+DRQSPREP - Salt used in preparation?
+---------------------------------------
+Variable Name:     DRQSPREP
+SAS Label:         Salt used in preparation?
+English Text:      How often is ordinary salt or seasoned salt added in cooking or preparing foods in your household? Is it never, rarely, occasionally, or very often?
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Never                    
+2                  Rarely                   
+3                  Occasionally             
+4                  Very often               
+9                  Don't Know               
+.                  Missing                  
+
+---------------------------------------
+
+DR1TKCAL - Energy (kcal)
+---------------------------------------
+Variable Name:     DR1TKCAL
+SAS Label:         Energy (kcal)
+English Text:      Energy (kcal)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 12501         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TPROT - Protein (gm)
+---------------------------------------
+Variable Name:     DR1TPROT
+SAS Label:         Protein (gm)
+English Text:      Protein (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 545.2         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCARB - Carbohydrate (gm)
+---------------------------------------
+Variable Name:     DR1TCARB
+SAS Label:         Carbohydrate (gm)
+English Text:      Carbohydrate (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 1586.24       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TSUGR - Total sugars (gm)
+---------------------------------------
+Variable Name:     DR1TSUGR
+SAS Label:         Total sugars (gm)
+English Text:      Total sugars (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 931.16        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TFIBE - Dietary fiber (gm)
+---------------------------------------
+Variable Name:     DR1TFIBE
+SAS Label:         Dietary fiber (gm)
+English Text:      Dietary fiber (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 107.8         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TTFAT - Total fat (gm)
+---------------------------------------
+Variable Name:     DR1TTFAT
+SAS Label:         Total fat (gm)
+English Text:      Total fat (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 567.96        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TSFAT - Total saturated fatty acids (gm)
+---------------------------------------
+Variable Name:     DR1TSFAT
+SAS Label:         Total saturated fatty acids (gm)
+English Text:      Total saturated fatty acids (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 268.591       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TMFAT - Total monounsaturated fatty acids (gm)
+---------------------------------------
+Variable Name:     DR1TMFAT
+SAS Label:         Total monounsaturated fatty acids (gm)
+English Text:      Total monounsaturated fatty acids (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 200.097       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TPFAT - Total polyunsaturated fatty acids (gm)
+---------------------------------------
+Variable Name:     DR1TPFAT
+SAS Label:         Total polyunsaturated fatty acids (gm)
+English Text:      Total polyunsaturated fatty acids (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 218.701       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCHOL - Cholesterol (mg)
+---------------------------------------
+Variable Name:     DR1TCHOL
+SAS Label:         Cholesterol (mg)
+English Text:      Cholesterol (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+0 to 2403          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+DR1TATOC - Vitamin E as alpha-tocopherol (mg)
+---------------------------------------
+Variable Name:     DR1TATOC
+SAS Label:         Vitamin E as alpha-tocopherol (mg)
+English Text:      Vitamin E as alpha-tocopherol (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 138.55        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TATOA - Added alpha-tocopherol (Vitamin E) (mg)
+---------------------------------------
+Variable Name:     DR1TATOA
+SAS Label:         Added alpha-tocopherol (Vitamin E) (mg)
+English Text:      Added alpha-tocopherol (Vitamin E) (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 72.32         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TRET - Retinol (mcg)
+---------------------------------------
+Variable Name:     DR1TRET
+SAS Label:         Retinol (mcg)
+English Text:      Retinol (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 19374         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVARA - Vitamin A, RAE (mcg)
+---------------------------------------
+Variable Name:     DR1TVARA
+SAS Label:         Vitamin A, RAE (mcg)
+English Text:      Vitamin A as retinol activity equivalents (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 20419         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TACAR - Alpha-carotene (mcg)
+---------------------------------------
+Variable Name:     DR1TACAR
+SAS Label:         Alpha-carotene (mcg)
+English Text:      Alpha-carotene (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 27509         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TBCAR - Beta-carotene (mcg)
+---------------------------------------
+Variable Name:     DR1TBCAR
+SAS Label:         Beta-carotene (mcg)
+English Text:      Beta-carotene (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 71772         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCRYP - Beta-cryptoxanthin (mcg)
+---------------------------------------
+Variable Name:     DR1TCRYP
+SAS Label:         Beta-cryptoxanthin (mcg)
+English Text:      Beta-cryptoxanthin (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 7381          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TLYCO - Lycopene (mcg)
+---------------------------------------
+Variable Name:     DR1TLYCO
+SAS Label:         Lycopene (mcg)
+English Text:      Lycopene (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 190742        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TLZ - Lutein + zeaxanthin (mcg)
+---------------------------------------
+Variable Name:     DR1TLZ
+SAS Label:         Lutein + zeaxanthin (mcg)
+English Text:      Lutein + zeaxanthin (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 74345         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVB1 - Thiamin (Vitamin B1) (mg)
+---------------------------------------
+Variable Name:     DR1TVB1
+SAS Label:         Thiamin (Vitamin B1) (mg)
+English Text:      Thiamin (Vitamin B1) (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 11.705        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVB2 - Riboflavin (Vitamin B2) (mg)
+---------------------------------------
+Variable Name:     DR1TVB2
+SAS Label:         Riboflavin (Vitamin B2) (mg)
+English Text:      Riboflavin (Vitamin B2) (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 18.534        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TNIAC - Niacin (mg)
+---------------------------------------
+Variable Name:     DR1TNIAC
+SAS Label:         Niacin (mg)
+English Text:      Niacin (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 238.457       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVB6 - Vitamin B6 (mg)
+---------------------------------------
+Variable Name:     DR1TVB6
+SAS Label:         Vitamin B6 (mg)
+English Text:      Vitamin B6 (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 44.751        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TFOLA - Total folate (mcg)
+---------------------------------------
+Variable Name:     DR1TFOLA
+SAS Label:         Total folate (mcg)
+English Text:      Total folate (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 3752          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+DR1TFA - Folic acid (mcg)
+---------------------------------------
+Variable Name:     DR1TFA
+SAS Label:         Folic acid (mcg)
+English Text:      Folic acid (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 3522          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TFF - Food folate (mcg)
+---------------------------------------
+Variable Name:     DR1TFF
+SAS Label:         Food folate (mcg)
+English Text:      Food folate (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 1616          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TFDFE - Folate, DFE (mcg)
+---------------------------------------
+Variable Name:     DR1TFDFE
+SAS Label:         Folate, DFE (mcg)
+English Text:      Folate as dietary folate equivalents (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 6218          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCHL - Total choline (mg)
+---------------------------------------
+Variable Name:     DR1TCHL
+SAS Label:         Total choline (mg)
+English Text:      Total choline (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 2749.6        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVB12 - Vitamin B12 (mcg)
+---------------------------------------
+Variable Name:     DR1TVB12
+SAS Label:         Vitamin B12 (mcg)
+English Text:      Vitamin B12 (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 248.71        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TB12A - Added vitamin B12 (mcg)
+---------------------------------------
+Variable Name:     DR1TB12A
+SAS Label:         Added vitamin B12 (mcg)
+English Text:      Added vitamin B12 (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 50.98         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVC - Vitamin C (mg)
+---------------------------------------
+Variable Name:     DR1TVC
+SAS Label:         Vitamin C (mg)
+English Text:      Vitamin C (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 1977.4        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVD - Vitamin D (D2 + D3) (mcg)
+---------------------------------------
+Variable Name:     DR1TVD
+SAS Label:         Vitamin D (D2 + D3) (mcg)
+English Text:      Vitamin D (D2 + D3) (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 105.7         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TVK - Vitamin K (mcg)
+---------------------------------------
+Variable Name:     DR1TVK
+SAS Label:         Vitamin K (mcg)
+English Text:      Vitamin K (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 2702.4        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCALC - Calcium (mg)
+---------------------------------------
+Variable Name:     DR1TCALC
+SAS Label:         Calcium (mg)
+English Text:      Calcium (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 7038          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TPHOS - Phosphorus (mg)
+---------------------------------------
+Variable Name:     DR1TPHOS
+SAS Label:         Phosphorus (mg)
+English Text:      Phosphorus (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 7373          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TMAGN - Magnesium (mg)
+---------------------------------------
+Variable Name:     DR1TMAGN
+SAS Label:         Magnesium (mg)
+English Text:      Magnesium (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 1506          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TIRON - Iron (mg)
+---------------------------------------
+Variable Name:     DR1TIRON
+SAS Label:         Iron (mg)
+English Text:      Iron (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 171.89        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TZINC - Zinc (mg)
+---------------------------------------
+Variable Name:     DR1TZINC
+SAS Label:         Zinc (mg)
+English Text:      Zinc (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 477.53        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCOPP - Copper (mg)
+---------------------------------------
+Variable Name:     DR1TCOPP
+SAS Label:         Copper (mg)
+English Text:      Copper (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 43.248        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TSODI - Sodium (mg)
+---------------------------------------
+Variable Name:     DR1TSODI
+SAS Label:         Sodium (mg)
+English Text:      Sodium (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 25949         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TPOTA - Potassium (mg)
+---------------------------------------
+Variable Name:     DR1TPOTA
+SAS Label:         Potassium (mg)
+English Text:      Potassium (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 14358         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TSELE - Selenium (mcg)
+---------------------------------------
+Variable Name:     DR1TSELE
+SAS Label:         Selenium (mcg)
+English Text:      Selenium (mcg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 2604.9        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TCAFF - Caffeine (mg)
+---------------------------------------
+Variable Name:     DR1TCAFF
+SAS Label:         Caffeine (mg)
+English Text:      Caffeine (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 4320          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TTHEO - Theobromine (mg)
+---------------------------------------
+Variable Name:     DR1TTHEO
+SAS Label:         Theobromine (mg)
+English Text:      Theobromine (mg)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 1188          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TALCO - Alcohol (gm)
+---------------------------------------
+Variable Name:     DR1TALCO
+SAS Label:         Alcohol (gm)
+English Text:      Alcohol (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 1152.8        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TMOIS - Moisture (gm)
+---------------------------------------
+Variable Name:     DR1TMOIS
+SAS Label:         Moisture (gm)
+English Text:      Moisture (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 17308.25      Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TS040 - SFA 4:0 (Butanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS040
+SAS Label:         SFA 4:0 (Butanoic) (gm)
+English Text:      SFA 4:0 (Butanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 7.843         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+DR1TS060 - SFA 6:0 (Hexanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS060
+SAS Label:         SFA 6:0 (Hexanoic) (gm)
+English Text:      SFA 6:0 (Hexanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 4.99          Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS080 - SFA 8:0 (Octanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS080
+SAS Label:         SFA 8:0 (Octanoic) (gm)
+English Text:      SFA 8:0 (Octanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 16.416        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS100 - SFA 10:0 (Decanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS100
+SAS Label:         SFA 10:0 (Decanoic) (gm)
+English Text:      SFA 10:0 (Decanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 10.727        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS120 - SFA 12:0 (Dodecanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS120
+SAS Label:         SFA 12:0 (Dodecanoic) (gm)
+English Text:      SFA 12:0 (Dodecanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 63.75         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS140 - SFA 14:0 (Tetradecanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS140
+SAS Label:         SFA 14:0 (Tetradecanoic) (gm)
+English Text:      SFA 14:0 (Tetradecanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 37.283        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS160 - SFA 16:0 (Hexadecanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS160
+SAS Label:         SFA 16:0 (Hexadecanoic) (gm)
+English Text:      SFA 16:0 (Hexadecanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 126.861       Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TS180 - SFA 18:0 (Octadecanoic) (gm)
+---------------------------------------
+Variable Name:     DR1TS180
+SAS Label:         SFA 18:0 (Octadecanoic) (gm)
+English Text:      SFA 18:0 (Octadecanoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 50.073        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TM161 - MFA 16:1 (Hexadecenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TM161
+SAS Label:         MFA 16:1 (Hexadecenoic) (gm)
+English Text:      MFA 16:1 (Hexadecenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 19.512        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TM181 - MFA 18:1 (Octadecenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TM181
+SAS Label:         MFA 18:1 (Octadecenoic) (gm)
+English Text:      MFA 18:1 (Octadecenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 184.586       Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TM201 - MFA 20:1 (Eicosenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TM201
+SAS Label:         MFA 20:1 (Eicosenoic) (gm)
+English Text:      MFA 20:1 (Eicosenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 5.558         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TM221 - MFA 22:1 (Docosenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TM221
+SAS Label:         MFA 22:1 (Docosenoic) (gm)
+English Text:      MFA 22:1 (Docosenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 7.023         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP182 - PFA 18:2 (Octadecadienoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP182
+SAS Label:         PFA 18:2 (Octadecadienoic) (gm)
+English Text:      PFA 18:2 (Octadecadienoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 195.387       Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP183 - PFA 18:3 (Octadecatrienoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP183
+SAS Label:         PFA 18:3 (Octadecatrienoic) (gm)
+English Text:      PFA 18:3 (Octadecatrienoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 38.127        Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP184 - PFA 18:4 (Octadecatetraenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP184
+SAS Label:         PFA 18:4 (Octadecatetraenoic) (gm)
+English Text:      PFA 18:4 (Octadecatetraenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 0.889         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP204 - PFA 20:4 (Eicosatetraenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP204
+SAS Label:         PFA 20:4 (Eicosatetraenoic) (gm)
+English Text:      PFA 20:4 (Eicosatetraenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 1.73          Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP205 - PFA 20:5 (Eicosapentaenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP205
+SAS Label:         PFA 20:5 (Eicosapentaenoic) (gm)
+English Text:      PFA 20:5 (Eicosapentaenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 3.713         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP225 - PFA 22:5 (Docosapentaenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP225
+SAS Label:         PFA 22:5 (Docosapentaenoic) (gm)
+English Text:      PFA 22:5 (Docosapentaenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 2.176         Range of Values
+.                  Missing
+
+---------------------------------------
+
+DR1TP226 - PFA 22:6 (Docosahexaenoic) (gm)
+---------------------------------------
+Variable Name:     DR1TP226
+SAS Label:         PFA 22:6 (Docosahexaenoic) (gm)
+English Text:      PFA 22:6 (Docosahexaenoic) (gm)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description
+----------------------------------------
+0 to 8.717         Range of Values
+.                  Missing
+
+---------------------------------------
+DR1_320Z - Total plain water drank yesterday (gm)
+---------------------------------------
+Variable Name:     DR1_320Z
+SAS Label:         Total plain water drank yesterday (gm)
+English Text:      Total plain water drank yesterday - including plain tap water, water from a drinking fountain, water from a water cooler, bottled water, and spring water.
+English Instructions: Calculated from water consumption records reported as part of the 24-hour dietary recall interview.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 15360         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1_330Z - Total tap water drank yesterday (gm)
+---------------------------------------
+Variable Name:     DR1_330Z
+SAS Label:         Total tap water drank yesterday (gm)
+English Text:      Total tap water drank yesterday - including filtered tap water and water from a drinking fountain.
+English Instructions: Calculated from tap water consumption records reported as part of the 24-hour dietary recall interview.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 15360         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1BWATZ - Total bottled water drank yesterday (gm)
+---------------------------------------
+Variable Name:     DR1BWATZ
+SAS Label:         Total bottled water drank yesterday (gm)
+English Text:      Total bottled water drank yesterday (gm)
+English Instructions: Calculated from bottle water consumption records reported as part of the 24-hour dietary recall interview.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 10800         Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+DR1TWSZ - Tap water source
+---------------------------------------
+Variable Name:     DR1TWSZ
+SAS Label:         Tap water source
+English Text:      When you drink tap water, what is the main source of the tap water?
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Community supply         
+4                  Don't drink tap water    
+91                 Other                    
+99                 Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+DSDANTA - Antacid reported as a dietary supplement
+---------------------------------------
+Variable Name:     DSDANTA
+SAS Label:         Antacid reported as a dietary supplement
+English Text:      Antacid reported as a dietary supplement
+English Instructions: Antacids that are reported with dietary supplements (DSQ) are coded 1, antacids reported with medications in the antacid section are coded 2, dietary supplements that are not antacids are coded 0.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------
+0                  Non-antacid supplement   
+1                  Antacid reported with dietary supplement (DSQ)  
+2                  Antacid reported with medication (RXQ)  
+.                  Missing                  
+
+---------------------------------------
+
+DSD128V - For kidney and bladder health
+---------------------------------------
+Variable Name:     DSD128V
+SAS Label:         For kidney and bladder health
+English Text:      For what reason or reasons do you take {PRODUCT NAME}? (For what reason or reasons did the doctor or other health professional tell you to take {PRODUCT}?)
+English Instructions: CAPI INSTRUCTION: IF CODE 1 IN DSQ.124, DISPLAY For what reason or reasons {do you/does SP} take {PRODUCT NAME}? IF CODE 2 IN DSQ.124, DISPLAY For what reason or reasons did the doctor or other health professional tell {you/SP} to take {PRODUCT}? HAND CARD DSQ3. CODE ALL THAT APPLY.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------
+30                 FOR KIDNEY AND BLADDER HEALTH  
+.                  Missing                  
+
+---------------------------------------
+
+DSD128FF - For liver health, detoxification
+---------------------------------------
+Variable Name:     DSD128FF
+SAS Label:         For liver health, detoxification
+English Text:      For what reason or reasons do you take {PRODUCT NAME}? (For what reason or reasons did the doctor or other health professional tell you to take {PRODUCT}?)
+English Instructions: CAPI INSTRUCTION: IF CODE 1 IN DSQ.124, DISPLAY For what reason or reasons {do you/does SP} take {PRODUCT NAME}? IF CODE 2 IN DSQ.124, DISPLAY For what reason or reasons did the doctor or other health professional tell {you/SP} to take {PRODUCT}? HAND CARD DSQ3. CODE ALL THAT APPLY.
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Categorical nominal
+
+Code or Value      Value Description        
+---------------------------------------
+40                 FOR LIVER HEALTH, DETOXIFICATION, CLEANSE SYSTEM  
+.                  Missing                  
+
+---------------------------------------
+
+DSQTKCAL - Energy (kcal)
+---------------------------------------
+Variable Name:     DSQTKCAL
+SAS Label:         Energy (kcal)
+English Text:      Energy (kcal)
+Target:            Both males and females (0 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.1 to 1270        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BMXBMI - Body Mass Index (kg/m**2)
+---------------------------------------
+Variable Name:     BMXBMI
+SAS Label:         Body Mass Index (kg/m**2)
+English Text:      Body Mass Index (kg/m**2)
+Target:            Both males and females (2 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+11.9 to 92.3       Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOSY1 - Systolic - 1st oscillometric reading
+---------------------------------------
+Variable Name:     BPXOSY1
+SAS Label:         Systolic - 1st oscillometric reading
+English Text:      Systolic - 1st oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+52 to 225          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXODI1 - Diastolic - 1st oscillometric reading
+---------------------------------------
+Variable Name:     BPXODI1
+SAS Label:         Diastolic - 1st oscillometric reading
+English Text:      Diastolic - 1st oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+31 to 151          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOSY2 - Systolic - 2nd oscillometric reading
+---------------------------------------
+Variable Name:     BPXOSY2
+SAS Label:         Systolic - 2nd oscillometric reading
+English Text:      Systolic - 2nd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+54 to 222          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXODI2 - Diastolic - 2nd oscillometric reading
+---------------------------------------
+Variable Name:     BPXODI2
+SAS Label:         Diastolic - 2nd oscillometric reading
+English Text:      Diastolic - 2nd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+28 to 146          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOSY3 - Systolic - 3rd oscillometric reading
+---------------------------------------
+Variable Name:     BPXOSY3
+SAS Label:         Systolic - 3rd oscillometric reading
+English Text:      Systolic - 3rd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+55 to 220          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXODI3 - Diastolic - 3rd oscillometric reading
+---------------------------------------
+Variable Name:     BPXODI3
+SAS Label:         Diastolic - 3rd oscillometric reading
+English Text:      Diastolic - 3rd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+30 to 145          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOPLS1 - Pulse - 1st oscillometric reading
+---------------------------------------
+Variable Name:     BPXOPLS1
+SAS Label:         Pulse - 1st oscillometric reading
+English Text:      Pulse - 1st oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+34 to 142          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOPLS2 - Pulse - 2nd oscillometric reading
+---------------------------------------
+Variable Name:     BPXOPLS2
+SAS Label:         Pulse - 2nd oscillometric reading
+English Text:      Pulse - 2nd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+34 to 141          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPXOPLS3 - Pulse - 3rd oscillometric reading
+---------------------------------------
+Variable Name:     BPXOPLS3
+SAS Label:         Pulse - 3rd oscillometric reading
+English Text:      Pulse - 3rd oscillometric reading
+Target:            Both males and females (8 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+36 to 140          Range of Values          
+.                  Missing     
+             
+---------------------------------------
+LBXSBU - Blood Urea Nitrogen (mg/dL)
+---------------------------------------
+Variable Name:     LBXSBU
+SAS Label:         Blood Urea Nitrogen (mg/dL)
+English Text:      Blood Urea Nitrogen (mg/dL)
+Target:            Both males and females (12 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+2 to 79            Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+LBXSCA - Total Calcium (mg/dL)
+---------------------------------------
+Variable Name:     LBXSCA
+SAS Label:         Total Calcium (mg/dL)
+English Text:      Total Calcium (mg/dL)
+Target:            Both males and females (12 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+6.4 to 12.3        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+LBXSUA - Uric acid (mg/dL)
+---------------------------------------
+Variable Name:     LBXSUA
+SAS Label:         Uric acid (mg/dL)
+English Text:      Uric acid (mg/dL)
+Target:            Both males and females (12 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.8 to 15.1        Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+URDACT - Albumin creatinine ratio (mg/g)
+---------------------------------------
+Variable Name:     URDACT
+SAS Label:         Albumin creatinine ratio (mg/g)
+English Text:      Albumin creatinine ratio (mg/g)
+Target:            Both males and females (3 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.27 to 11676.92   Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+URDFLOW1 - Urine #1 Flow Rate (mL/min)
+---------------------------------------
+Variable Name:     URDFLOW1
+SAS Label:         Urine #1 Flow Rate (mL/min)
+English Text:      Urine #1 Flow Rate (mL/min)
+Target:            Both males and females (3 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0 to 53            Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+URDFLOW2 - Urine #2 Flow Rate (mL/min)
+---------------------------------------
+Variable Name:     URDFLOW2
+SAS Label:         Urine #2 Flow Rate (mL/min)
+English Text:      Urine #2 Flow Rate (mL/min)
+Target:            Both males and females (3 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.006 to 14.95     Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+URDFLOW3 - Urine #3 Flow Rate (mL/min)
+---------------------------------------
+Variable Name:     URDFLOW3
+SAS Label:         Urine #3 Flow Rate (mL/min)
+English Text:      Urine #3 Flow Rate (mL/min)
+Target:            Both males and females (3 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.097 to 5.345     Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+LBXGLU - Fasting Glucose (mg/dL)
+---------------------------------------
+Variable Name:     LBXGLU
+SAS Label:         Fasting Glucose (mg/dL)
+English Text:      Fasting Glucose (mg/dL)
+Target:            Both males and females (12 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+47 to 524          Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+URXUPB - Lead, urine (ug/L)
+---------------------------------------
+Variable Name:     URXUPB
+SAS Label:         Lead, urine (ug/L)
+English Text:      Lead, urine (ug/L)
+Target:            Both males and females (6 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------
+0.021 to 19.34     Range of Values          
+.                  Missing                  
+
+---------------------------------------
+
+BPQ020 - Ever told you had high blood pressure
+---------------------------------------
+Variable Name:     BPQ020
+SAS Label:         Ever told you had high blood pressure
+English Text:      {Have you/Has SP} ever been told by a doctor or other health professional that {you/s/he} had hypertension, also called high blood pressure?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+BPQ080 - Doctor told you - high cholesterol level
+---------------------------------------
+Variable Name:     BPQ080
+SAS Label:         Doctor told you - high cholesterol level
+English Text:      {Have you/Has SP} ever been told by a doctor or other health professional that {your/his/her} blood cholesterol level was high?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+BPQ050A - Now taking prescribed medicine for HBP
+---------------------------------------
+Variable Name:     BPQ050A
+SAS Label:         Now taking prescribed medicine for HBP
+English Text:      {Are you/Is SP} now taking prescribed medicine?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+DIQ010 - Doctor told you have diabetes
+---------------------------------------
+Variable Name:     DIQ010
+SAS Label:         Doctor told you have diabetes
+English Text:      The next questions are about specific medical conditions. {Other than during pregnancy, {have you/has SP}/{Have you/Has SP}} ever been told by a doctor or health professional that {you have/{he/she/SP} has} diabetes or sugar diabetes?
+English Instructions: CAPI INSTRUCTION: IF SP AGE < 15, DISPLAY "HAVE SP" FOR THE FIRST DISPLAY AND "SP HAS" FOR THE SECOND DISPLAY. IF SP IS FEMALE AND AGE >= 20, DISPLAY "OTHER THAN DURING PREGNANCY, {HAVE YOU/HAS SP}".
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+3                  Borderline               
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+DIQ050 - Taking insulin now
+---------------------------------------
+Variable Name:     DIQ050
+SAS Label:         Taking insulin now
+English Text:      {Is SP/Are you} now taking insulin?
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+DIQ070 - Take diabetic pills to lower blood sugar
+---------------------------------------
+Variable Name:     DIQ070
+SAS Label:         Take diabetic pills to lower blood sugar
+English Text:      {Is SP/Are you} now taking diabetic pills to lower {{his/her}/your} blood sugar? These are sometimes called oral agents or oral hypoglycemic agents.
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+
+DIQ160 - Ever told you have prediabetes
+---------------------------------------
+Variable Name:     DIQ160
+SAS Label:         Ever told you have prediabetes
+English Text:      {Have you/Has SP} ever been told by a doctor or other health professional that {you have/SP has} any of the following: prediabetes, impaired fasting glucose, impaired glucose tolerance, borderline diabetes or that {your/her/his} blood sugar is higher than normal but not high enough to be called diabetes or sugar diabetes?
+English Instructions: CAPI INSTRUCTION: HELP SCREEN: PREDIABETES, IMPAIRED FASTING GLUCOSE, IMPAIRED GLUCOSE TOLERANCE, OR BORDERLINE DIABETES OCCURS WHEN BLOOD SUGAR (GLUCOSE) LEVELS ARE HIGHER THAN NORMAL BUT NOT HIGH ENOUGH TO BE DIABETES. HAND CARD DIQ1.
+Target:            Both males and females (12 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------
+1                  Yes                      
+2                  No                       
+7                  Refused                  
+9                  Don't know               
+.                  Missing                  
+
+---------------------------------------
+DBD895 - # of meals not home prepared
+---------------------------------------
+Variable Name:     DBD895
+SAS Label:         # of meals not home prepared
+English Text:      Next I'm going to ask you about meals. By meal, I mean breakfast, lunch and dinner. During the past 7 days, how many meals {did you/did SP} get that were prepared away from home in places such as restaurants, fast food places, food stands, grocery stores, or from vending machines? {Please do not include meals provided as part of the school lunch or school breakfast./Please do not include meals provided as part of the community programs you reported earlier.}
+English Instructions: CAPI INSTRUCTION: IF DBQ381G = 1 OR DBQ.411G = 1, DISPLAY {Please do not include meals provided as part of the school lunch or school breakfast.} IF DBQ.301 = 1 OR DBQ.330 = 1, DISPLAY {Please do not include meals provided as part of the community programs you reported earlier.} SOFT EDIT: DISPLAY A MESSAGE FOR ENTRY LARGER THAN "21." - "Unusually large number entered - Please verify - this is more than 3 meals per day, each day during the past 7 days."
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1 to 21            Range of Values         
+0                  None                    
+5555               More than 21 meals per week
+7777               Refused                 
+9999               Don't Know              
+.                  Missing                
+
+---------------------------------------
+
+DBD900 - # of meals from fast food or pizza place
+---------------------------------------
+Variable Name:     DBD900
+SAS Label:         # of meals from fast food or pizza place
+English Text:      How many of those meals {did you/did SP} get from a fast-food or pizza place?
+English Instructions: CAPI INSTRUCTION: HARD EDIT NUMBER OF MEALS ENTERED IN DBQ.900 MUST BE EQUAL TO OR LESS THAN NUMBER ENTERED IN DBQ.895. IF NOT, DISPLAY THE FOLLOWING: "THE NUMBER OF MEALS FROM A FAST FOOD OR PIZZA PLACE CANNOT BE GREATER THAN NUMBER OF MEALS PREPARED AWAY FROM HOME."
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1 to 21            Range of Values         
+0                  None                    
+5555               More than 21 meals per week
+7777               Refused                 
+9999               Don't know              
+.                  Missing                
+
+---------------------------------------
+
+DBD905 - # of ready-to-eat foods in past 30 days
+---------------------------------------
+Variable Name:     DBD905
+SAS Label:         # of ready-to-eat foods in past 30 days
+English Text:      Some grocery stores sell "ready to eat" foods such as salads, soups, chicken, sandwiches, and cooked vegetables in their salad bars and deli counters. During the past 30 days, how often did {you/SP} eat "ready to eat" foods from the grocery store? Please do not include sliced meat or cheese you buy for sandwiches and frozen or canned foods.
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1 to 90            Range of Values         
+0                  Never                   
+6666               More than 90 times in 30 days
+7777               Refused                 
+9999               Don't know              
+.                  Missing                
+
+---------------------------------------
+
+DBD910 - # of frozen meals/pizza in past 30 days
+---------------------------------------
+Variable Name:     DBD910
+SAS Label:         # of frozen meals/pizza in past 30 days
+English Text:      During the past 30 days, how often did you {SP} eat frozen meals or frozen pizzas? Here are some examples of frozen meals and frozen pizzas.
+Target:            Both males and females (1 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1 to 90            Range of Values         
+0                  Never                   
+6666               More than 90 times in 30 days
+7777               Refused                 
+9999               Don't know              
+.                  Missing                
+
+---------------------------------------
+
+DBQ700 - How healthy is the diet
+---------------------------------------
+Variable Name:     DBQ700
+SAS Label:         How healthy is the diet
+English Text:      Next I have some questions about {your/SP’s} eating habits. In general, how healthy is {your/his/her} overall diet? Would you say . . .
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Excellent               
+2                  Very good               
+3                  Good                    
+4                  Fair                    
+5                  Poor                    
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ022 - Ever told you had weak/failing kidneys?
+---------------------------------------
+Variable Name:     KIQ022
+SAS Label:         Ever told you had weak/failing kidneys?
+English Text:      {Have you/Has SP} ever been told by a doctor or other health professional that {you/s/he} had weak or failing kidneys? Do not include kidney stones, bladder infections, or incontinence.
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Yes                     
+2                  No                      
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ026 - Ever had kidney stones?
+---------------------------------------
+Variable Name:     KIQ026
+SAS Label:         Ever had kidney stones?
+English Text:      {Have you/Has SP} ever had kidney stones?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary: LABEL
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Yes                     
+2                  No                      
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ005 - How often have urinary leakage?
+---------------------------------------
+Variable Name:     KIQ005
+SAS Label:         How often have urinary leakage?
+English Text:      Many people have leakage of urine. The next few questions ask about urine leakage. How often {do you/does SP} have urinary leakage? Would {you/s/he} say . . .
+English Instructions: CAPI INSTRUCTION: HELP SCREEN: Other terms for urinary leakage are not being able to hold your urine until you can reach a toilet, not being able to control your bladder, loss of urine control.
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Never                   
+2                  Less than once a month  
+3                  A few times a month     
+4                  A few times a week      
+5                  Every day and/or night  
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ010 - How much urine lose each time?
+---------------------------------------
+Variable Name:     KIQ010
+SAS Label:         How much urine lose each time?
+English Text:      How much urine {do you/does SP} lose each time? Would {you/s/he} say . . .
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical ordinal
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Drops                   
+2                  Small splashes          
+3                  More                    
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ042 - Leak urine during physical activities?
+---------------------------------------
+Variable Name:     KIQ042
+SAS Label:         Leak urine during physical activities?
+English Text:      During the past 12 months, {have you/has SP} leaked or lost control of even a small amount of urine with an activity like coughing, lifting or exercise?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Yes                     
+2                  No                      
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ044 - Urinated before reaching the toilet?
+---------------------------------------
+Variable Name:     KIQ044
+SAS Label:         Urinated before reaching the toilet?
+English Text:      During the past 12 months, {have you/has SP} leaked or lost control of even a small amount of urine with an urge or pressure to urinate and {you/he/she} couldn't get to the toilet fast enough?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Yes                     
+2                  No                      
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+
+KIQ046 - Leak urine during nonphysical activities
+---------------------------------------
+Variable Name:     KIQ046
+SAS Label:         Leak urine during nonphysical activities
+English Text:      During the past 12 months, {have you/has SP} leaked or lost control of even a small amount of urine without an activity like coughing, lifting, or exercise, or an urge to urinate?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description        
+---------------------------------------------------------------------------------
+1                  Yes                     
+2                  No                      
+7                  Refused                 
+9                  Don't know              
+.                  Missing                
+
+---------------------------------------
+KIQ480 - How many times urinate in night?
+---------------------------------------
+Variable Name:     KIQ480
+SAS Label:         How many times urinate in night?
+English Text:      During the past 30 days, how many times per night did {you/SP} most typically get up to urinate, from the time {you/s/he} went to bed at night until the time {you/he/she} got up in the morning. Would {you/s/he} say
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+0                  0                        
+1                  1                        
+2                  2                        
+3                  3                        
+4                  4                        
+5                  5 or more               
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+MCQ080 - Doctor ever said you were overweight
+---------------------------------------------
+Variable Name:     MCQ080
+SAS Label:         Doctor ever said you were overweight
+English Text:      Has a doctor or other health professional ever told {you/SP} that {you were/s/he/SP was} overweight?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+---------------------------------------------
+
+MCQ160M - Ever told you had thyroid problem
+-------------------------------------------
+Variable Name:     MCQ160m
+SAS Label:         Ever told you had thyroid problem
+English Text:      Has a doctor or other health professional ever told {you/SP} that {you/s/he} . . .had another thyroid (thigh-roid) problem?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+-------------------------------------------
+MCQ520 - Abdominal pain during past 12 months?
+----------------------------------------------
+Variable Name:     MCQ520
+SAS Label:         Abdominal pain during past 12 months?
+English Text:      During the past 12 months {have you/has s/he} had pain in the abdominal area shaded on the diagram?
+English Instructions: INTERVIEWER INSTRUCTION: FOR FEMALES DO NOT INCLUDE MENSTRUAL PAIN. HAND CARD MCQ1
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ550 - Has DR ever said you have gallstones
+----------------------------------------------
+Variable Name:     MCQ550
+SAS Label:         Has DR ever said you have gallstones
+English Text:      Has a doctor or other health professional ever told {you/SP} that {you/s/he} had gallstones?
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ366A - Doctor told you to control/lose weight
+------------------------------------------------
+Variable Name:     MCQ366a
+SAS Label:         Doctor told you to control/lose weight
+English Text:      During the past 12 months {have you/has s/he} ever been told by a doctor or health professional to: control {your/his/her} weight or lose weight?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ366b - Doctor told you to exercise
+-------------------------------------
+Variable Name:     MCQ366b
+SAS Label:         Doctor told you to exercise
+English Text:      During the past 12 months {have you/has s/he} ever been told by a doctor or health professional to: increase {your/his/her} physical activity or exercise?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ366C - Doctor told you to reduce salt in diet
+------------------------------------------------
+Variable Name:     MCQ366c
+SAS Label:         Doctor told you to reduce salt in diet
+English Text:      During the past 12 months {have you/has s/he} ever been told by a doctor or health professional to: watch or reduce the amount of sodium or salt in {your/his/her} diet?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ366d - Doctor told you to reduce fat/calories
+------------------------------------------------
+Variable Name:     MCQ366d
+SAS Label:         Doctor told you to reduce fat/calories
+English Text:      During the past 12 months {have you/has s/he} ever been told by a doctor or health professional to: watch or reduce the amount of fat or calories in {your/his/her} diet?
+Target:            Both males and females (16 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ160L - Ever told you had any liver condition
+-----------------------------------------------
+Variable Name:     MCQ160l
+SAS Label:         Ever told you had any liver condition
+English Text:      Has a doctor or other health professional ever told {you/SP} that {you/s/he} . . .had any kind of liver condition?
+English Instructions: CAPI INSTRUCTION: TEXT OF QUESTION SHOULD BE OPTIONAL AFTER FIRST ITEM IS READ. INTERVIEWER: INCLUDE VIRAL HEPATITIS (INCLUDING HEPATITIS A, HEPATITIS B; AND HEPATITIS C); AUTOIMMUNE LIVER DISEASE (INCLUDING PRIMARY BILIARY CIRRHOSIS; AUTOIMMUNE HEPATITIS, SCLEROSING CHOLANGITIS); GENETIC LIVER DISEASES (INCLUDING ALPHA-1-ANTITRYSIN DEFICIENCY, HEMOCHROMOTOSIS, AND WILSON'S DISEASE); DRUG- OR MEDICATION-INDUCED LIVER DISEASE; ALCOHOLIC LIVER DISEASE; NON-ALCOHOLIC FATTY LIVER DISEASE; FATTY LIVER DISEASE; LIVER CANCER; LIVER CYST; LIVER ABSCESS; LIVER FIBROSIS; AND LIVER CIRRHOSIS. INTERVIEWER DO NOT INCLUDE GALLBLADDER DISEASE; GALLSTONES; OR CHOLECYSTITIS.
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+MCQ300c - Close relative had diabetes?
+---------------------------------------
+Variable Name:     MCQ300c
+SAS Label:         Close relative had diabetes?
+English Text:      Including living and deceased, were any of {SP's/your} close biological that is, blood relatives including father, mother, sisters or brothers, ever told by a health professional that they had diabetes?
+English Instructions: CAPI INSTRUCTION: TEXT QUESTION SHOULD BE OPTIONAL, ' [ ] 'S, AFTER FIRST TIME.
+Target:            Both males and females (20 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description                   
+---------------------------------------------------------------------------------
+1                  Yes                                 
+2                  No                                  
+7                  Refused                             
+9                  Don't know                         
+.                  Missing                            
+
+----------------------------------------------
+
+PAQ605 - Vigorous work activity
+---------------------------------------
+Variable Name:     PAQ605
+SAS Label:         Vigorous work activity
+English Text:      Next I am going to ask you about the time {you spend/SP spends} doing different types of physical activity in a typical week. Think first about the time {you spend/he spends/she spends} doing work. Think of work as the things that {you have/he has/she has} to do such as paid or unpaid work, household chores, and yard work. Does {your/SP's} work involve vigorous-intensity activity that causes large increases in breathing or heart rate like carrying or lifting heavy loads, digging or construction work for at least 10 minutes continuously?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+PAQ620 - Moderate work activity
+---------------------------------------
+Variable Name:     PAQ620
+SAS Label:         Moderate work activity
+English Text:      Does {your/SP's} work involve moderate-intensity activity that causes small increases in breathing or heart rate such as brisk walking or carrying light loads for at least 10 minutes continuously?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+PAQ635 - Walk or bicycle
+---------------------------------------
+Variable Name:     PAQ635
+SAS Label:         Walk or bicycle
+English Text:      The next questions exclude the physical activity at work that you have already mentioned. Now I would like to ask you about the usual way {you travel/SP travels} to and from places. For example to school, for shopping, to work. In a typical week {do you/does SP} walk or use a bicycle for at least 10 minutes continuously to get to and from places?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+PAQ650 - Vigorous recreational activities
+---------------------------------------
+Variable Name:     PAQ650
+SAS Label:         Vigorous recreational activities
+English Text:      The next questions exclude the work and transport activities that you have already mentioned. Now I would like to ask you about sports, fitness and recreational activities. In a typical week {do you/does SP} do any vigorous-intensity sports, fitness, or recreational activities that cause large increases in breathing or heart rate like running or basketball for at least 10 minutes continuously?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+PAQ665 - Moderate recreational activities
+---------------------------------------
+Variable Name:     PAQ665
+SAS Label:         Moderate recreational activities
+English Text:      In a typical week {do you/does SP} do any moderate-intensity sports, fitness, or recreational activities that cause a small increase in breathing or heart rate such as brisk walking, bicycling, swimming, or volleyball for at least 10 minutes continuously?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+PAD680 - Minutes sedentary activity
+---------------------------------------
+Variable Name:     PAD680
+SAS Label:         Minutes sedentary activity
+English Text:      The following question is about sitting at school, at home, getting to and from places, or with friends including time spent sitting at a desk, traveling in a car or bus, reading, playing cards, watching television, or using a computer. Do not include time spent sleeping. How much time {do you/does SP} usually spend sitting on a typical day?
+English Instructions: SOFT EDIT: 18 HOURS OR MORE. ERROR MESSAGE: PLEASE VERIFY TIMES OF 18 HOURS OR MORE. HARD EDIT: 24 HOURS OR MORE. ERROR MESSAGE: THE TIME SHOULD BE LESS THAN 24 HOURS. ENTER NUMBER OF MINUTES OR HOURS.
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Numerical
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+0 to 1320          Range of Values          
+7777               Refused                  
+9999               Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+SMQ020 - Smoked at least 100 cigarettes in life
+---------------------------------------
+Variable Name:     SMQ020
+SAS Label:         Smoked at least 100 cigarettes in life
+English Text:      These next questions are about cigarette smoking and other tobacco use. {Have you/Has SP} smoked at least 100 cigarettes in {your/his/her} entire life?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical nominal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Yes                       
+2                  No                        
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+
+---------------------------------------
+
+SMQ040 - Do you now smoke cigarettes?
+---------------------------------------
+Variable Name:     SMQ040
+SAS Label:         Do you now smoke cigarettes?
+English Text:      {Do you/Does SP} now smoke cigarettes?
+Target:            Both males and females (18 YEARS - 150 YEARS)
+
+Categorical ordinal/binary
+
+Code or Value      Value Description       	
+---------------------------------------------------------------------------------
+1                  Every day                
+2                  Some days               
+3                  Not at all              
+7                  Refused                  
+9                  Don't know              
+.                  Missing                 
+---------------------------------------
+
+SMD460 - # of people who live here smoke tobacco?
+---------------------------------------
+Variable Name:     SMD460
+SAS Label:         # of people who live here smoke tobacco?
+English Text:      Now I would like to ask you a few questions about smoking in this home. How many people who live here smoke cigarettes, cigars, little cigars, pipes, water pipes, hookah, or any other tobacco product?
+English Instructions: INTERVIEWER INSTRUCTION: IF RESPONSE IS NO ONE, ENTER ZERO. ENTER NUMBER OF PERSONS. CAPI INSTRUCTION: ALLOW '0' AS AN ENTRY. RANGE EDIT: CANNOT BE GREATER THAN # OF PEOPLE IN THE HOUSEHOLD. IF '0', 'REFUSED' OR 'DON'T KNOW', GO TO END OF SECTION.
+Target:            Both males and females 0 YEARS - 150 YEARS
+
+Categorical ordinal
+
+Code or Value      Value Description
+---------------------------------
+0                  No one in household is a smoker
+1                  1 household member is a smoker
+2                  2 or more household members are smokers
+777                Refused
+999                Don't know
+.                  Missing
+
+---------------------------------------
+
+SMD470 - # of people who smoke inside this home?
+---------------------------------------
+Variable Name:     SMD470
+SAS Label:         # of people who smoke inside this home?
+English Text:      Not counting decks, porches, or detached garages, how many people who live here smoke cigarettes, cigars, little cigars, pipes, water pipes, hookah, or any other tobacco product inside this home?
+English Instructions: ENTER NUMBER OF PERSONS. CAPI INSTRUCTION: ALLOW '0' AS AN ENTRY. HARD EDIT: NUMBER ENTERED IN SMQ470 MUST BE EQUAL OR LESS THAN SMQ460. IF '0', 'REFUSED' OR 'DON'T KNOW', GO TO END OF SECTION.
+Target:            Both males and females 0 YEARS - 150 YEARS
+
+Categorical ordinal
+
+Code or Value      Value Description
+---------------------------------
+0                  No one smokes inside the house
+1                  1 household member smokes inside the house
+2                  2 or more household members smoke inside the house
+777                Refused
+999                Don't know
+.                  Missing
+
+---------------------------------------
+
+ALQ130 - Avg # alcoholic drinks/day - past 12 mos
+---------------------------------------
+Variable Name:     ALQ130
+SAS Label:         Avg # alcoholic drinks/day - past 12 mos
+English Text:      During the past 12 months, on those days that {you/SP} drank alcoholic beverages, on the average, how many drinks did {you/he/she} have? By a drink, I mean a 12 oz. beer, a 5 oz. glass of wine, or one and a half ounces of liquor.
+English Instructions: ENTER # OF DRINKS. IF LESS THAN 1 DRINK, ENTER '1'.
+Target:            Both males and females 18 YEARS - 150 YEARS
+
+Numerical
+
+Code or Value      Value Description
+---------------------------------
+1 to 13            Range of Values
+15                 15 drinks or more
+777                Refused
+999                Don't know
+.                  Missing
+
+---------------------------------------
+
+SLQ050 - Ever told doctor had trouble sleeping?
+---------------------------------------
+Variable Name:     SLQ050
+SAS Label:         Ever told doctor had trouble sleeping?
+English Text:      {Have you/Has SP} ever told a doctor or other health professional that {you have/s/he has} trouble sleeping?
+Target:            Both males and females 16 YEARS - 150 YEARS
+
+Categorical nominal/binary
+
+Code or Value      Value Description
+---------------------------------
+1                  Yes
+2                  No
+7                  Refused
+9                  Don't know
+.                  Missing
+
+---------------------------------------
+
+RXDDAYS - Number of days taken medicine
+---------------------------------------
+Variable Name:     RXDDAYS
+SAS Label:         Number of days taken medicine
+English Text:      For how long have you been using or taking {PRODUCT NAME}?
+Target:            Both males and females 0 YEARS - 150 YEARS
+
+Numerical
+
+Code or Value      Value Description
+---------------------------------
+1 to 21900         Range of Values
+77777              Refused
+99999              Don't know
+.                  Missing
+
+---------------------------------------
+
+RXDCOUNT - Number of prescription medicines taken
+---------------------------------------
+Variable Name:     RXDCOUNT
+SAS Label:         Number of prescription medicines taken
+English Text:      The number of prescription medicines reported.
+Target:            Both males and females 0 YEARS - 150 YEARS
+
+Numerical
+
+Code or Value      Value Description
+---------------------------------
+1 to 22            Range of Values
+.                  Missing
+
+---------------------------------------

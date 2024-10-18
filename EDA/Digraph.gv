@@ -1,0 +1,62 @@
+digraph {
+	graph [rankdir=TB]
+	A [label="Liver disease patient dataset"]
+	B [label="Exploratory data analysis
+ and preprocessing"]
+	C [label="Data normalization 
+and standardization"]
+	D [label="Data splitting"]
+	E [label="Training dataset (60%)"]
+	F [label="Testing dataset (40%)"]
+	G [label="Data augmentation
+Up-sampling"]
+	H [label="Model building
+Hyperparameter tuning
+K-fold cross validation"]
+	I [label="Model evaluation"]
+	J [label="Feature importance"]
+	K [label="Performance evaluation
+using various metrics"]
+	L [label="Boosting algorithms
+- XGBoost
+- LightGBM
+- Gradient boosting" shape=box]
+	M [label="Bagging algorithms
+- Random forest
+- Extra trees
+- Bagged decision tree" shape=box]
+	N [label="Voting algorithms
+- Logistic regression
+- Decision tree
+- Support vector machine" shape=box]
+	O [label="Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Specificity
+- AUC-ROC
+- NPV
+- MCC
+- FPR
+- FNR
+- FDR
+- MCR
+- Runtime" shape=box]
+	P [label="Liver disease prediction" shape=ellipse]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	D -> F
+	E -> G
+	G -> H
+	H -> I
+	I -> J
+	J -> K
+	K -> P
+	E -> L
+	E -> M
+	E -> N
+	F -> O
+}

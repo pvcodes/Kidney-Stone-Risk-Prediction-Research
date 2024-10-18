@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1,ROC AUC,True Negatives,False Positives,False Negatives,True Positives
+Gradient Boosting,0.9022801302931596,0.1111111111111111,0.005780346820809248,0.01098901098901099,0.6869781150320188,1661,8,172,1
