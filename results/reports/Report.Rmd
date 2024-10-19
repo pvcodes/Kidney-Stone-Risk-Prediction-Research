@@ -1,8 +1,13 @@
 ---
 title: "Predicting Occurance of Kidney Stones: Exploratory Data Analysis of Relevant Features in NHANES 2017 - 2020"
 author: |
-  | Brook Thomson, 300653729; David Nguyen, 300584723;
-  | Katie Chu-Fong, 300601174; Thinh Nguyen, 300611544
+  | David Nguyen 300584723 (Individual)
+  |
+  | [Github](https://github.com/dvnguyen02/KStoneClassifierML)
+  |
+  | Group members
+  | Katie Chu-Fong 300601174; Thinh Nguyen 300611544;
+  | Brook Thomson 300653729
 date: "`r Sys.Date()`"
 output: 
   pdf_document: 
@@ -11,23 +16,13 @@ output:
 # Executive Summary
 
 Kidney stones affect approximately 10% of people in their lifetime, causing severe pain and potentially leading to serious complications. Our research aimed to develop a predictive model to identify individuals at high risk for kidney stone formation, using data from the National Health and Nutrition Examination Survey.
-We analyzed various factors including age, gender, race, existing health conditions, dietary habits, and biochemical markers. Our study found that several key factors are associated with an increased risk of kidney stones:
+We analyzed various factors and found that several key elements are strongly associated with an increased risk of kidney stones: High blood pressure, Gender (being female), Saturated fatty acid intake (particularly dodecanoic acid), Abdominal pain history, Vitamin A intake, Age, Race (particularly non-Hispanic White and non-Hispanic Black), History of gallstones
 
-* Older age
-* Male gender
-* White race
-* Presence of certain health conditions (e.g., high blood pressure, gallstones)
-* Higher body mass index
-* Certain dietary factors (e.g., vitamin A intake)
-* Abnormal kidney function indicators
+Our predictive model demonstrated strong performance in identifying individuals at risk for kidney stones. Importantly, the model revealed that risk factors can vary significantly between individuals. For example, high blood pressure emerged as the most significant risk factor, while certain dietary elements like saturated fatty acid intake also played a crucial role.
 
-Our predictive model demonstrated strong performance in identifying individuals at risk for kidney stones. Importantly, the model revealed that risk factors can vary significantly between individuals. For example, high caffeine intake emerged as a major risk factor for some people, while good hydration showed a protective effect for others.
+These findings highlight the complex nature of kidney stone formation and underscore the importance of personalized risk assessment. By leveraging these insights, healthcare providers can implement targeted preventive measures, potentially reducing the incidence of kidney stones, improving patient outcomes, and decreasing healthcare costs associated with treatment and complications.
 
-Secondly, these findings highlight the complex nature of kidney stone formation and underscore the importance of personalized risk assessment. By leveraging these insights, healthcare providers can implement targeted preventive measures, potentially reducing the incidence of kidney stones, improving patient outcomes, and decreasing healthcare costs associated with treatment and complications.
-
-Thirdly, we recommend that healthcare systems consider implementing screening programs for kidney stone risk, especially for individuals with identified high-risk factors. Patient education should emphasize the importance of modifiable risk factors, particularly hydration and dietary choices. Given the complex relationship between dietary factors and kidney stone risk, individualized dietary recommendations should be considered rather than one-size-fits-all approaches.
-
-Finally, while our model shows promise, it's important to note that it may not capture all possible influences on kidney stone formation, such as genetic predisposition or certain environmental factors. Further research is needed to fully understand the mechanisms influencing kidney stone formation and to refine predictive models for diverse populations.
+Additionally, we recommend implementing targeted screening programs and patient education focusing on modifiable risk factors, especially blood pressure management and personalized dietary recommendations. While our model is promising, further research is needed to fully understand kidney stone formation mechanisms and refine predictive models, particularly regarding the interplay between physiological conditions and dietary factors across diverse populations.
 
 \newpage
 \tableofcontents
@@ -79,7 +74,7 @@ Counts of feature types and brief examples are as follows:
 * **97 numerical features**, e.g. energy in kilocalories (continuous); age in years (discrete)
 * **49 categorical features**, e.g. gender (binary: male, female); race (nominal: Mexican American, other Hispanic, white, etc.); diet healthiness (ordinal: excellent, very good, fair, etc.)
 
-## 2.2 Data Completeness
+## 2.2 Summary of the Data
 
 ```{r}
 na_df <- read.csv("../figures/na_prop.csv")
@@ -97,8 +92,8 @@ Features that do have missing data can be summarised as follows:
 ```{r}
 knitr::include_graphics("../figures/na_prop.pdf")
 ```
-
 Figure 1: a) Count Of Features With Various Missing Data Proportions. b) Missing Data Proportions Of The Features Containing Above 20% Missing Data.
+
 <!-- `URDFLOW1`: urine #1 flow rate; `DBD900`: # meals from fast food/pizza place; `BPXOPLS1`: pulse, 1st osocillometric reading; `BPXOPLS2`: pulse, 2nd oscillometric reading; `BPXOPLS3`: pulse, 3rd oscillometric reading; `DSDANTA`: taking antacid; `ALQ130`: average # alcoholic drinks/day; `RDXCOUNT`: # precription medicines taken; `RXDDAYS`: # days taken medicine; `DBD100`: how often add salt to food at table; `LBXGLU`: fasting glucose; `SMQ040`: smoke cigarettes; `BPQ050A`: taking prescribed medicine for HBP; `KIQ010`: how much urine lose [during urinary leakage]; `URXUPB`: lead, urine; `SMD470`: # people who smoke inside home; `DIQ070`: take diabetic pills; `DSQTKCAL`: energy (kcal);  `DIQ050`: taking insulin; `URDFLOW2`: urine #2 flow rate; `DSD128V`: [take supplement] for kidney, bladder; `DSD128FF`: [take supplement] for liver health, detoxification; `URDFLOW3`: urine #3 flow rate. -->
 
 Overall, the majority of features do not contain a substantial proportion of missing data (Figure 1a).
@@ -190,7 +185,7 @@ Gallstones and weak/failing kidneys are the most strongly associated with kidney
 knitr::include_graphics("../figures/lab_dist.pdf")
 ```
 
-Figure 4: Density distributions of laboratory features, split by those who have had kidney stones and have not had kidney stones. a) Fasting glucose. b) Blood urea nitrogen. c) Total calcium. d) Uric acid. e) Albumin creatinine ratio. f) Lead in urine. g) Shows the Pearson Correlation values between the laboratory results, not discriminant of kidney stone status.
+Figure 4: Density Distributions Of Laboratory Features, Split By Those Who Have Had Kidney Stones And Have Not Had Kidney Stones. A) Fasting Glucose. B) Blood Urea Nitrogen. C) Total Calcium. D) Uric Acid. E) Albumin Creatinine Ratio. F) Lead In Urine
 
 Figure 4 shows that most laboratory features appear within expected ranges, with the exception of uric acid (Figure 4d). There appears to be outlier(s) skewing this feature with up to 10000 mg/dL uric acid, which is likely to be an error as ordinary uric acid levels should not exceed the single-digit mg/dL range. 
 
@@ -205,7 +200,7 @@ Therefore this indicates that uric acid and lead are not associated with kidney 
 knitr::include_graphics("../figures/dietary_difference.pdf")
 ```
 
-Figure 5: Dietary Differences
+Figure 5: Dietary Differences.
 
 Alcohol consumption shows the largest difference, with individuals who have had kidney stones consuming 25.2% less alcohol. This aligns with studies suggesting that excessive alcohol intake can increase kidney stone risk by causing dehydration and altering urine composition (Ferraro et al., 2013).
 
@@ -222,8 +217,7 @@ Among the top factors, we see a trend in vitamins and antioxidants, particularly
 ```{r}
 knitr::include_graphics("../figures/Methodology.pdf")
 ```
-
-Figure 6: Overview Of The Kidney Stones Disease Prediction Methodology
+Figure 6: Overview Of The Kidney Stones Disease Prediction Methodology.
 
 ## 4.2 Data Preprocessing and Data Augmentation
 
@@ -312,7 +306,7 @@ Specifically, **LightGBM Classifier** slightly outperforms the other models acro
 knitr::include_graphics("../../EDA/figures/shap_beeswarm_plot_top10_small.pdf")
 ```
 
-Figure 7: SHAP Summary Plot: Distribution Of SHAP Values For Top 10 Features
+Figure 7: Top 10 Predictors of Kidney Stone Risk: Impact and Distribution (SHAP Summary Plot)
 
 The beeswarm plot visualizes the distribution of SHAP values for each feature across all samples, revealing the magnitude and direction of a feature's impact on model predictions.
 
@@ -329,7 +323,7 @@ Abdominal pain's primarily positive SHAP values underscore its clinical signific
 knitr::include_graphics("../../EDA/figures/shap_force_plot_instance_3_zoomed.pdf")
 ```
 
-Figure 8: SHAP Force Plot
+Figure 8: Individual Risk Factor Analysis for Kidney Stone Formation (SHAP Force Plot)
 
 This SHAP force plot illustrates the impact of two variables on the model's prediction for a specific instance, with the final prediction f(x) of 0.30 being greater than the base value. This positive difference indicates that for this particular case, the combined effect of the variables increases the prediction above the average model output. The plot highlights MCQ550 (history of gallstones) with a substantial negative impact of -1.9567, suggesting that a history of gallstones significantly lowers the prediction. Conversely, DR1TLZ (Lutein + Zeaxanthin intake in mcg) shows a positive influence of 1.1256, partially offsetting the negative effect of gallstones. The interplay between these factors results in a net positive effect, pushing the final prediction above the base value. This suggests that while a history of gallstones tends to decrease the predicted outcome, higher intake of Lutein and Zeaxanthin mitigates this effect to some extent, ultimately leading to a prediction that is higher than the model's average output for the population.
 
