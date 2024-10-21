@@ -6,27 +6,27 @@
 \contentsline {section}{3. Ethics, Privacy, and Security}{5}{section*.7}%
 \contentsline {subsection}{3.1 Ethical Considerations}{5}{section*.8}%
 \contentsline {subsection}{3.2 Privacy Concerns}{5}{section*.9}%
-\contentsline {subsection}{3.3 Security Measures}{6}{section*.10}%
-\contentsline {section}{4. Exploratory Data Analysis}{7}{section*.11}%
-\contentsline {subsection}{4.1 Demographic Analysis}{7}{section*.12}%
-\contentsline {subsection}{4.2 Health Conditions Analysis}{8}{section*.13}%
-\contentsline {subsection}{4.3 Laboratory Analysis}{9}{section*.14}%
-\contentsline {subsection}{4.4 Dietary Analysis}{10}{section*.15}%
-\contentsline {section}{4. Detailed Analysis Results}{11}{section*.16}%
-\contentsline {subsection}{4.1 Modelling Methodology Overview}{11}{section*.17}%
-\contentsline {subsection}{4.2 Data Preprocessing and Data Augmentation}{12}{section*.18}%
-\contentsline {subsubsection}{4.2.1 Data Preprocessing Techniques}{12}{section*.19}%
-\contentsline {subsubsection}{4.2.2 Data Augmentation}{12}{section*.20}%
-\contentsline {subsection}{4.3 Model Development}{12}{section*.21}%
-\contentsline {subsubsection}{4.3.1 Model Selection}{12}{section*.22}%
-\contentsline {subsubsection}{4.3.2 Classifier Performance}{13}{section*.23}%
-\contentsline {subsection}{4.4 Interpretation of Model Results}{13}{section*.24}%
-\contentsline {section}{5. Conclusions and Recommendations}{14}{section*.25}%
-\contentsline {subsection}{5.1 Conclusions}{14}{section*.26}%
-\contentsline {subsection}{5.2 Recommendations}{15}{section*.27}%
-\contentsline {subsection}{5.3 Limitations}{15}{section*.28}%
-\contentsline {section}{6. References}{15}{section*.29}%
-\contentsline {section}{Appendices}{19}{section*.30}%
-\contentsline {subsection}{Appendix A: Confusion Matrix Comparison}{19}{section*.31}%
-\contentsline {subsection}{Appendix B: Performance Metrics Formulas}{19}{section*.32}%
-\contentsline {subsection}{Appendix C: Data Balancing Visualization}{20}{section*.33}%
+\contentsline {subsection}{3.3 Security Measures}{5}{section*.10}%
+\contentsline {section}{4. Exploratory Data Analysis}{6}{section*.11}%
+\contentsline {subsection}{4.1 Demographic Analysis}{6}{section*.12}%
+\contentsline {subsection}{4.2 Health Conditions Analysis}{7}{section*.13}%
+\contentsline {subsection}{4.3 Dietary Analysis}{7}{section*.14}%
+\contentsline {subsection}{4.4 Laboratory Analysis}{8}{section*.15}%
+\contentsline {section}{5. Detailed Analysis Results}{9}{section*.16}%
+\contentsline {subsection}{5.1 Modelling Methodology Overview}{9}{section*.17}%
+\contentsline {subsection}{5.2 Data Preprocessing and Data Augmentation}{10}{section*.18}%
+\contentsline {subsubsection}{5.2.1 Data Preprocessing Techniques}{10}{section*.19}%
+\contentsline {subsubsection}{5.2.2 Data Augmentation}{10}{section*.20}%
+\contentsline {subsection}{5.3 Model Development}{10}{section*.21}%
+\contentsline {subsubsection}{5.3.1 Model Selection}{10}{section*.22}%
+\contentsline {subsubsection}{5.3.2 Classifier Performance}{10}{section*.23}%
+\contentsline {subsection}{5.4 Interpretation of Model Results}{11}{section*.24}%
+\contentsline {section}{6. Conclusions, Recommendation and Limitations}{12}{section*.25}%
+\contentsline {subsection}{6.1 Conclusions}{12}{section*.26}%
+\contentsline {subsection}{6.2 Recommendations}{12}{section*.27}%
+\contentsline {subsection}{6.3 Limitations}{12}{section*.28}%
+\contentsline {section}{6. References}{13}{section*.29}%
+\contentsline {section}{Appendices}{16}{section*.30}%
+\contentsline {subsection}{Appendix A: Detailed Model Performance Metrics}{16}{section*.31}%
+\contentsline {subsection}{Appendix B: Performance Metrics Formulas}{16}{section*.32}%
+\contentsline {subsection}{Appendix C: Data Balancing Visualization}{17}{section*.33}%

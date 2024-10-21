@@ -61,18 +61,18 @@ Counts (and proportions) of the binary target variable classes are as follows:
 
 The key features are broadly described in the following:
 
-* **Demographic**: gender, age, race, education, marital status, and income. Men and older individuals are more likely to have had kidney stones (Lieske et al., 2014), and there is evidence that kidney stone prevalence and severity is associated with various socioeconomic factors (Bayne et al., 2019; Trivedi et al., 2008; Winitzki et al., 2022). 
-* **Dietary**: vitamin, water, nutrient, and dietary supplement intake. Kidney stone incidence increases with certain dietary habits, such as low calcium, low potassium, and low fluid diets (Cappucio et al., 1990; Chewcharat et al., 2022). Everyday foods in the NHANES dietary interviews are deconstructed and aggregated into their nutritional components, thus there is highly specific (and largely correlated) dietary and nutrient data that constitutes a significant portion of the total features explored.
-* **Examination**: body mass index (BMI), blood pressure, and pulse readings. Indicators of general health are useful predictive features for kidney stone risk (Cappucio et al., 1990; Jeong et al., 2011).
-* **Laboratory**: aspects of biochemistry profile, and urine-associated tests. Kidney diseases or urinary tract abnormalities (that can lead to kidney stones) have been associated with abnormal urinary levels of components such as glucose, lead, and albumin creatinine ratio (Spatola et al., 2016). Studies using NHANES, by Chewcharat & Curhan (2020) and Sun et al. (2019), have previously assessed prevalence of kidney stones in comparison to relevant laboratory values.
-* **Questionnaire**: past medical history (conditions and medicines), dietary and alcohol habits, urinary tract function, physical activity, smoking, and sleep habits. Again, general health, behaviours, and lifestyle have a large influence on kidney stone disease (Li et al., 2014; Xue et al., 2024). Factors such as lack of physical activity and smoking can indirectly damage the urinary tract and promote stone formation (Lieske, 2013; Soueidan et al., 2015).
+* **Demographic**: gender, age, race, education, marital status, and income. 
+* **Dietary**: vitamin, water, nutrient, and dietary supplement intake. Everyday foods in the NHANES dietary interviews are deconstructed and aggregated into their nutritional components.
+* **Examination**: body mass index (BMI), blood pressure, and pulse readings.
+* **Laboratory**: aspects of biochemistry profile, and urine-associated tests.
+* **Questionnaire**: past medical history (conditions and medicines), dietary and alcohol habits, urinary tract function, physical activity, smoking, and sleep habits.
 
 Feature type ranges from numerical continuous and discrete to categorical binary, nominal, and ordinal. Dietary, examination, and laboratory data are mainly numerical, while demographic and questionnaire data are mainly categorical. To avoid difficult or complicated natural languange processing or text mining, free-text data was not selected.
 
 Counts of feature types and brief examples are as follows:
 
 * **97 numerical features**, e.g. energy in kilocalories (continuous); age in years (discrete)
-* **49 categorical features**, e.g. gender (binary: male, female); race (nominal: Mexican American, other Hispanic, white, etc.); diet healthiness (ordinal: excellent, very good, fair, etc.)
+* **49 categorical features**, e.g. gender (binary: male, female); race (nominal: Mexican American, other Hispanic, white, etc.)
 
 ## 2.2 Summary of the Data
 
@@ -98,18 +98,12 @@ Figure 1: a) Count Of Features With Various Missing Data Proportions. b) Missing
 
 Overall, the majority of features do not contain a substantial proportion of missing data (Figure 1a).
 
-Over half of features have less than 20% missing data (Figure 1a). Features from the table "Dietary Interview - Total Nutrient Intakes" ([P_DR1TOT](https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_DR1TOT.htm)) are the main contributors to this particular proportion. A large number of features were selected from that table, and data collected within pertains to a consistent subset of people. Consequently, it is reasonable to assume that features originating from the same or similar NHANES tables will share comparable patterns of missing data. For example, features related to dietary intake will only have recorded values for those who partook in dietary interviews, which may differ from the set of people who partook in laboratory tests. This pattern can also be seen in Figure 1b with the set of features `BPXOPLS1`, `BPXOPLS2`, and `BPXOPLS3`, which correspond to successive pulse readings and have identical missing value proportions (~25%).
-
-`KIQ010`, `DSD128V`, and `DSD128FF` are features with very high percentages of missing data (over 50%), as seen in Figure 1b. They have structural missingness - e.g. in the case of `KIQ010`, recording a value for the amount of urine lost is dependent on the participant affirming that they have had urinary leakage, which most participants have not. Likewise, `DSD128V` and `DSD128FF` are both dependent on the participant affiriming that they do take supplements, which, again, may not be the case for most.
+Over half of features have less than 20% missing data (Figure 1a). Features from the table "Dietary Interview - Total Nutrient Intakes" ([P_DR1TOT](https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_DR1TOT.htm)) are the main contributors to this particular proportion. A large number of features were selected from that table, and data collected within pertains to a consistent subset of people.
 
 
 # 3. Ethics, Privacy, and Security
 
 ## 3.1 Ethical Considerations
-
-“...ethical issues can be (a) epistemic, related to misguided, inconclusive or inscrutable evidence; (b) normative, related to unfair outcomes and transformative effectives; or (c) related to traceability” (Morley et al., 2020) 
-
-These are the broad scopes of the ethical issues that are present when using machine learning methods in healthcare.  
 
 * Epistemic – evidence related ethical issues. This includes bias within a dataset, opacity in decision making, and inaccurate decisions made from inconclusive evidence. 
 
@@ -117,33 +111,24 @@ These are the broad scopes of the ethical issues that are present when using mac
 
 * Traceability – the ability to trace mistakes, and identify responsibility for mistakes. Additionally, that information about the algorithm be accessible and comprehensible (Mittelstadt et al., 2016) 
 
-These ideas are heavily intertwined, for example, bias in a dataset (epistemic) may result in a discriminatory outcome (normative). While we always want our algorithms to have accurate, unbiased outcomes, the stakes become high with healthcare, as an incorrect result could be fatal to the patient. In the context of kidney stone prediction, it is less a diagnostic tool for current kidney stones, but whether they may develop them in future, so preventative measures could be taken to decrease a person’s risk, such as a change in diet, medication or regularity of checkups. While there are not life stakes, there is also the stake of the cost to the patient, and their ability to give informed consent about the medical treatments they recieve – which is difficult to provide if you do not know why you have been deemed at risk. Steps should be taken to make sure the algorithm is traceable, and attempts should be made to reduce any bias prevalent in the dataset. 
+Ethical issues in healthcare machine learning fall into three categories: epistemic (evidence-related), normative (fairness and transparency), and traceability (accountability and comprehensibility). These are interrelated; for instance, dataset bias (epistemic) can lead to discriminatory outcomes (normative). In kidney stone prediction, while not immediately life-threatening, accuracy remains crucial for informed consent and appropriate preventative measures. The algorithm should be traceable, with efforts made to reduce dataset bias and ensure clear reasoning behind risk assessments.
 
 ## 3.2 Privacy Concerns
 
-Personal health data is extremely sensitive information, making privacy a huge concern. This is a widely recognised concern however, which means there is a great deal of legislation we and NHANES need to be in line with. 
+Personal health data privacy is a major concern, governed by extensive legislation. As we're using NHANES data from a U.S. government agency, we must consider U.S., local, and international laws, as well as social norms. Our moral duty extends beyond data collection to its use.
+Four U.S. federal laws apply to NHANES data privacy:
 
-As our data is from the NHANES dataset, which is part of a program by a governmental agency of the United Stated of America, and the data is about those who reside in the United States, we must consider the laws, protections, and regulations the USA has, as well as the laws of our own country and the laws of social acceptance. While we may not be the ones who collected the data or released it, we are not relinquished of our moral duties. Using data that doesn’t meet privacy standards could lead to legal trouble and societal backlash, so ensuring our data already meets privacy standards - and if not, taking steps to ensure it does - is key.  
+1. The Privacy Act of 1974
+1. The Confidential Information Protection and Statistical Efficiency Act
+1. The Cybersecurity Enhancement Act
+1. Section 308(d) of the Public Health Service Act
 
-The United States of America currently has 4 federal laws that cover patient privacy in regards to the NHANES survey data – these are: 
-
-1. The Privacy Act of 1974 - requires that data about an individual cannot be released without the individual’s consent (U.S Department of Justice, 2014).
-1. The Confidential Information Protection and Statistical Efficiency Act – states if information is gathered for statistical purposes, it should only be used for statistical purposes, that an individual should not identifiable, and that confidentiality should be safeguarded by controlling access to the information (Federal Chief Information Officers, 2002).
-1. The Cybersecurity Enhancement Act – requires agencies to have appropriate cybersecurity measures and plans in place (Library of Congress, 2014).
-1. Section 308(d) of the Public Health Service Act – similar to The Confidential Information Protection and Statistical Efficiency Act, it states that a person should not be identifiable, and that the data may only be used for the purpose it was supplied for (National Center for Health Statistics, 2021; Office of the Legislative Council, 2020).
-
-NHANES is currently in compliance with the above acts, and by using the data for statistical purposes, we are in compliance with The Confidential Information Protection and Statistical Efficiency Act. However, the United States of America also has differing data privacy laws state-by-state (Pittman, 2023), and as the NHANES survey is national, participants will be from a variety of states and therefore have different privacy standards. These state level data privacy laws are typically surrounding consumer data and corporations, as opposed to governmental survey data, but are still important to consider. While geographic information is collected as part of NHANES, its use is limited and restricted, so we are unable to verify ourselves if NHANES is complying with the state laws, and the NHANES privacy page and brochure were both released prior to state privacy laws coming into effect. States are also continuing to roll out new privacy laws and not all are yet in effect, and so even if the data is currently legally sound in terms of privacy, this may change in the coming years. While we may not know NHANES and our own exact legality stance in the states currently, we do know that the information that NHANES releases to the public has no identifiable information, only those with special permissions can access some identifiers (such as geographic location), and these steps ensure patient confidentiality. 
+These laws ensure individual consent, data use restrictions, non-identifiability, and cybersecurity measures. NHANES complies with these acts, and our statistical use aligns with requirements.
+U.S. states have varying data privacy laws, which are evolving. While NHANES collects geographic information, its use is restricted. The public NHANES data contains no identifiable information, with special permissions required for accessing certain identifiers, ensuring patient confidentiality.
 
 ## 3.3 Security Measures
 
-To ensure the security of the NHANES dataset and compliance with the National Center for Health Statistics (NCHS) requirements, our project has implemented a set of data security measures. The NHANES dataset is stored in an access-controlled repository, with raw and processed data kept in separate, restricted directories. Access to these directories is limited to authorized group members only, utilizing robust permission settings to control access based on specific tasks and responsibilities.
-
-All data transfers are conducted using secure, encrypted protocols. We maintain detailed audit trails and leverage version control capabilities to track all data access and modifications. Access permissions are regularly reviewed and updated to align with group members' current tasks and responsibilities, ensuring that access rights remain current and appropriate throughout the project lifecycle.
-
-We have implemented a data minimization strategy, ensuring that only essential NHANES data relevant to the project is stored and processed. Additional security measures include two-factor authentication for all team members accessing the data and encryption for any locally stored data.
-
-Upon completion of the project, all data files and any derived data will be securely deleted from all storage locations using methods that prevent recovery. This ensures that the data is not retained unnecessarily and reduces the risk of unauthorized access or disclosure after the project's conclusion.
-All these practices are in full compliance with NCHS requirements for handling NHANES data.
+To comply with NCHS requirements, we've implemented  security measures for the NHANES dataset. Data is stored in access-controlled repositories with separate directories for raw and processed data. Access is restricted to authorized team members based on specific tasks. We use encrypted data transfers, maintain audit trails, and employ version control. Two-factor authentication and regular access reviews are enforced. Only essential project-related data is stored and processed. Upon project completion, all data will be securely deleted from all storage locations, ensuring NCHS compliance throughout the project lifecycle.
 
 # 4. Exploratory Data Analysis
 
@@ -153,21 +138,13 @@ All these practices are in full compliance with NCHS requirements for handling N
 knitr::include_graphics("../figures/demo_ks_prev.pdf")
 ```
 
-Figure 2: A) Density Distribution Of Age Across Those Who Have Had Kidney Stones And Those Who Have Not. B) Proportion Of Males And Females Within Their Respective Groups Who Have Had Kidney Stones. C) Proportion Of Various Races Within Their Respective Groups Who Have Had Kidney Stones. D) Proportion Of Various Education Levels Within Their Respective Groups Who Have Had Kidney Stones. The Category "Refused" Was Removed Due To Low Count. E) Proportion Of Various Marital Statuses Within Their Respective Groups Who Have Had Kidney Stones. The Categories "Refused" And "Don't Know" Were Removed Due To Low Count. F) Density Distribution Of Ratio Of Family Income To Poverty Guidelines.
+Figure 2: Demographic Factors and Kidney Stone Prevalence
 
-At a younger age (20 - 40 years of age), a notably higher proportion of people have never had kidney stones as opposed to have (Figure 2a). As age increases (> 50 years of age), the proportion of people who have never had kidney stones becomes less than those who have. The overall prevalence of having had kidney stones increases steadily from 20 - 40 years of age, plateaus after 40 years of age, then increases again to peak at ~60 years of age.
+Age demonstrates a significant correlation with kidney stone occurrence. The prevalence increases steadily from ages 20-40, plateaus briefly, then peaks around age 60. Notably, individuals over 50 show a higher likelihood of having experienced kidney stones compared to younger cohorts. Gender plays a significant role in kidney stone prevalence, with males showing a slightly higher rate (10%) compared to females (8%). We have also noticed Racial Disparities in kidney stone prevalence are evident. Asian and Black populations exhibit the lowest rates (just above 5%), while White and other/multiracial groups show the highest (close to 15%). 
 
-Figure 2b shows that approximately 10% of males have had kidney stones, while a lesser percentage of around 8% of females have. Thus, kidney stones among males are slightly higher than the overall prevalence of kidney stones (~9.4%), while females are slightly below.
+Education level appears to have minimal impact on kidney stone prevalence. The difference between the highest prevalence (college/AA degree at ~10%) and lowest (high school grad/GED at ~8%) is relatively small. The ratio of family income to poverty guidelines suggests an inverse relationship with kidney stone prevalence. Higher ratios (>4), indicating income well above poverty thresholds, correspond with lower kidney stone occurrence.
 
-There is clear fluctuation in kidney stone prevalence among different races (Figure 2c), with Asian and Black people at the lowest (just above 5% have had kidney stones), increasing to Mexican Americans (approximately 8%). Races with kidney stone prevalence greater than the overall prevalence are other Hispanic (over 10%), other/multiracial, and White people (latter two are close to 15%). There is a large distinction (~10%) between the lowest and highest prevalence. The low and high proportions are also significantly different from the overall kidney stone prevalence.
-
-As education level changes, the proportion of those who have had kidney stones fluctuates, but there is no obvious trend among successive education levels (Figure 2d). The difference between the education level with the highest kidney stone prevalence (college/AA degree at ~10%) and lowest (high school grad/GED at ~8%) is relatively minimal.
-
-Those that are married/living with partner or widowed/divorced/separated show a greater prevalence of kidney stones than those that have never married, as seen in Figure 2e. Never married people also have a much lower prevalence than overall kidney stone prevalance. However, this may be due to the confounding factor of age, instead of an inherent characteristic of marriage that increases kidney stone occurance.
-
-In Figure 2f, a ratio close to 1 means family income is approximately equal to poverty thresholds; greater than 1 means family income is above poverty thresholds. At a lower to middle ratio (0 - 4), it is slightly more common to not have had kidney stones, but not significantly. At a higher ratio (> 4), there is a large difference - the prevalence of never having had kidney stones is notably higher than having had them. 
-
-Overall, Figure 2 indicates that nearly all demographic features - age, gender, marital status, race, and ratio of family income to poverty guidelines - are associated with prevalence of kidney stones. Confirming previous research, older people and males are more likely to have had kidney stones. Age may be a confounding factor in the apparent association of kidney stone occurance with marital status, but regardless it can still be a useful feature. The lack of significant association between education level and kidney stones indicate that it might be uninformative in a predictive context.
+Age, gender , and income-to-poverty ratio all show associations with kidney stone prevalence. While education level appears less influential, it may still provide contextual information. These demographic factors could prove valuable in predictive models for kidney stone risk.
 
 ## 4.2 Health Conditions Analysis
 
@@ -177,24 +154,9 @@ knitr::include_graphics("../figures/cond_ks_prop.pdf")
 
 Figure 3: The Proportion Of People With Various Other Conditions Who Also Have Had Kidney Stones.
 
-Gallstones and weak/failing kidneys are the most strongly associated with kidney stone occurance, with close to 25% of people having (either or both of) those conditions also having had kidney stones. Between ~11% and ~15% of people who have the remaining conditions also have had kidney stones. All these are much higher than overall kidney stone prevalence (9.4%), indicating that these features are likely to be useful for a predictive model. It can be noted that some of these conditions may also possess a high degree of correlation between each other, which may be reflected in their similar proportions in Figure 3, e.g. being overweight and having high cholesterol. Feature combination/transformation could be used to reduce dimensionality.
+Gallstones and weak/failing kidneys show the strongest association with kidney stone occurrence, with about 25% of individuals having these conditions also experiencing kidney stones. Other health conditions exhibit a 11-15% co-occurrence rate with kidney stones, all exceeding the overall prevalence of 9.4%. These elevated rates suggest these features could be valuable for predictive modeling. 
 
-## 4.3 Laboratory Analysis
-
-```{r}
-knitr::include_graphics("../figures/lab_dist.pdf")
-```
-
-Figure 4: Density Distributions Of Laboratory Features, Split By Those Who Have Had Kidney Stones And Have Not Had Kidney Stones. A) Fasting Glucose. B) Blood Urea Nitrogen. C) Total Calcium. D) Uric Acid. E) Albumin Creatinine Ratio. F) Lead In Urine
-
-Figure 4 shows that most laboratory features appear within expected ranges, with the exception of uric acid (Figure 4d). There appears to be outlier(s) skewing this feature with up to 10000 mg/dL uric acid, which is likely to be an error as ordinary uric acid levels should not exceed the single-digit mg/dL range. 
-
-Distribution shape of laboratory features remains relatively identical, regardless of kidney stone status. Distributions for fasting glucose (Figure 4a) and total calcium (Figure 4c) are shifted slightly right (towards higher values) for those who have had kidney stones. The peak bin for blood urea nitrogen (Figure 4b) is at a marginally lower value for those who have had kidney stones in comparison to those who have not. Albumin creatinine ratio appears to peak later, and remain slightly higher, at increasing mg/g for those who have had kidney stones (Figure 4e). Distributions for lead (Figure 4f) and uric acid are consistent for both kidney stone statuses - however, detail in the uric acid histogram may be obscured by the outlier(s). 
-
-Therefore this indicates that uric acid and lead are not associated with kidney stone prevalence. The remaining laboratory features are associated due to differing distributions according to kidney stone status.       
-
-
-## 4.4 Dietary Analysis
+## 4.3 Dietary Analysis
 
 ```{r}
 knitr::include_graphics("../figures/dietary_difference.pdf")
@@ -202,67 +164,55 @@ knitr::include_graphics("../figures/dietary_difference.pdf")
 
 Figure 5: Dietary Differences.
 
-Alcohol consumption shows the largest difference, with individuals who have had kidney stones consuming 25.2% less alcohol. This aligns with studies suggesting that excessive alcohol intake can increase kidney stone risk by causing dehydration and altering urine composition (Ferraro et al., 2013).
+Alpha-carotene and beta-carotene (both forms of vitamin A) display substantial negative differences (-24.0% and -13.8% respectively), with those who have had kidney stones consuming less. In contrast, other form of vitamin A, Retinol intake is 11.5% higher in the kidney stone group, contrasting with the carotenoid findings. Some research has indicated that excessive vitamin A intake may increase kidney stone risk (Tang et al., 2012), which could explain the lower carotenoid but higher retinol intake in those with a history of stones. Caffeine and theobromine consumption is notably higher in those with a history of kidney stones (14.4% and 13.9% more, respectively). While caffeine has been associated with increased risk of kidney stones in some studies (Ferraro et al., 2014), the higher intake in those with a history of stones could reflect changes in fluid consumption patterns post-diagnosis.
 
-In addition, alpha-carotene and beta-carotene (both forms of vitamin A) display substantial negative differences (-24.0% and -13.8% respectively), with those who have had kidney stones consuming less. In contrast, other form of vitamin A, Retinol intake is 11.5% higher in the kidney stone group, contrasting with the carotenoid findings. Some research has indicated that excessive vitamin A intake may increase kidney stone risk (Tang et al., 2012), which could explain the lower carotenoid but higher retinol intake in those with a history of stones.
+Vitamin C intake is 8.4% lower in individuals who have had kidney stones. This aligns with studies suggesting that high-dose vitamin C supplementation may increase kidney stone risk (Thomas et al., 2013), potentially leading to reduced intake in those with a history of stones. Among the top factors, we see a trend in vitamins and antioxidants, particularly forms of vitamin A, vitamin C, and vitamin E (alpha-tocopherol).
 
-Caffeine and theobromine consumption is notably higher in those with a history of kidney stones (14.4% and 13.9% more, respectively). While caffeine has been associated with increased risk of kidney stones in some studies (Ferraro et al., 2014), the higher intake in those with a history of stones could reflect changes in fluid consumption patterns post-diagnosis.
+## 4.4 Laboratory Analysis
 
-Vitamin C intake is 8.4% lower in individuals who have had kidney stones. This aligns with studies suggesting that high-dose vitamin C supplementation may increase kidney stone risk (Thomas et al., 2013), potentially leading to reduced intake in those with a history of stones.
-
-Among the top factors, we see a trend in vitamins and antioxidants, particularly forms of vitamin A, vitamin C, and vitamin E (alpha-tocopherol).
-
-# 4. Detailed Analysis Results
-## 4.1 Modelling Methodology Overview
 ```{r}
+knitr::include_graphics("../figures/lab_dist.pdf")
+```
+
+Figure 4: Density distributions of laboratory features, split by those who have had kidney stones and have not had kidney stones. a) Fasting glucose. b) Blood urea nitrogen. c) Total calcium. d) Uric acid. e) Albumin creatinine ratio. f) Lead in urine
+
+Figure 4 shows that most laboratory features appear within expected ranges, with the exception of uric acid (Figure 4d). There appears to be outlier(s) skewing this feature with up to 10000 mg/dL uric acid, which is likely to be an error as ordinary uric acid levels should not exceed the single-digit mg/dL range. 
+
+Distribution shape of laboratory features remains relatively identical, regardless of kidney stone status. Distributions for fasting glucose (Figure 4a) and total calcium (Figure 4c) are shifted slightly right (towards higher values) for those who have had kidney stones. The peak bin for blood urea nitrogen (Figure 4b) is at a marginally lower value for those who have had kidney stones in comparison to those who have not. Albumin creatinine ratio appears to peak later, and remain slightly higher, at increasing mg/g for those who have had kidney stones (Figure 4e). Distributions for lead (Figure 4f) and uric acid are consistent for both kidney stone statuses - however, detail in the uric acid histogram may be obscured by the outlier(s).  Therefore this indicates that uric acid and lead are not associated with kidney stone prevalence. 
+
+# 5. Detailed Analysis Results
+## 5.1 Modelling Methodology Overview
+\begin{center}
+```{r,echo=FALSE, out.width="90%", out.height="90%"}
 knitr::include_graphics("../figures/Methodology.pdf")
 ```
+\end{center}
 Figure 6: Overview Of The Kidney Stones Disease Prediction Methodology.
 
-## 4.2 Data Preprocessing and Data Augmentation
+## 5.2 Data Preprocessing and Data Augmentation
 
-### 4.2.1 Data Preprocessing Techniques
+### 5.2.1 Data Preprocessing Techniques
 
-Our data preprocessing pipeline comprised several key steps to prepare the dataset for model training:
+Our data preprocessing pipeline involved several key steps to prepare the dataset for model training. We began by splitting the dataset into training and testing sets using a 70-30 ratio, ensuring sufficient data for both model training and unbiased evaluation. Feature selection was performed by removing features with more than 40% missing values, reducing the number of features from 145 to 128. For the remaining features, we employed K-Nearest Neighbors (KNN) imputation with k=5 neighbors to handle missing values, potentially preserving important data relationships. Numeric features were then standardized using Standard Scaler to have zero mean and unit variance, while categorical variables were encoded using one-hot encoding with the 'ignore' option for handling unknown categories during model inference. These steps collectively focused our analysis on the most complete and potentially informative variables while preparing the data for effective model training.
 
-**Dataset Splitting**: We initially partitioned the dataset into training and testing sets using a 70-30 ratio. This split ensures a substantial portion of data for model training while reserving a significant subset for unbiased evaluation.
-
-**Feature Selection**: To improve data quality and model efficiency, we removed features with more than 40% missing values. This step reduced the number of features from 145 to 128, focusing our analysis on the most complete and potentially informative variables.
-
-**Missing Value Imputation**: For the remaining features, both numeric and categorical, we employed K-Nearest Neighbors (KNN) imputation with k=5 neighbors. This method estimates missing values based on similar instances, potentially preserving important data relationships.
-
-**Feature Scaling**: Numeric features were standardized using Standard Scaler, transforming them to have zero mean and unit variance. 
-
-**Categorical Encoding**: Categorical variables were encoded using one-hot encoding, with the 'ignore' option for handling unknown categories during model inference. 
-
-### 4.2.2 Data Augmentation
+### 5.2.2 Data Augmentation
 
 In our initial training set, we observed a significant class imbalance, with 6,445 total records comprising 5,818 patients without kidney stones (90.3%) and only 627 patients with kidney stones (9.7%). This imbalance posed a potential challenge, as models could be biased towards the majority class, potentially leading to poor predictive performance for the minority class.
 
-To mitigate this issue, we employed the **Synthetic Minority Over-sampling Technique (SMOTE)**. SMOTE works by creating synthetic examples of the minority class, effectively increasing its representation in the dataset without simply duplicating existing instances.
-
-Post-SMOTE, our training set achieved balance with 5,818 records in each class, resulting in a total of 11,636 records. With equal representation of both classes, our models can learn patterns associated with kidney stone presence more effectively, and the risk of model bias towards the majority class is significantly diminished.
+To mitigate this issue, we employed the **Synthetic Minority Over-sampling Technique (SMOTE)**. SMOTE works by creating synthetic examples of the minority class, effectively increasing its representation in the dataset without simply duplicating existing instances. Post-SMOTE, our training set achieved balance with 5,818 records in each class, resulting in a total of 11,636 records. With equal representation of both classes, our models can learn patterns associated with kidney stone presence more effectively.
 
 For a visual representation of the data distribution before and after SMOTE balancing, please refer to Appendix A.
 
 
-## 4.3 Model Development
+## 5.3 Model Development
 
-### 4.3.1 Model Selection
+### 5.3.1 Model Selection
 
-For this study, we selected three distinct classification models, each representing different algorithmic approaches:
+We chose these models for their complementary strengths:
 
-**Gradient Boosting Classifier**: An ensemble method that builds a series of weak learners (typically decision trees) sequentially, with each new model correcting errors from the previous ones.
+Gradient Boosting is know for effective for handling complex interactions and non-linear relationships in medical data. LightGBM is chosen for its efficiency with large datasets and ability to handle categorical features directly. Voting Classifier, an ensemble model that combines Logistic Regression, Decision Tree, and Support Vector Machine (SVM) classifiers. This approach leverages the strengths of different algorithms to make predictions.
 
-**LightGBM Classifier**: A gradient boosting framework that uses tree-based learning algorithms, known for its efficiency and ability to handle large-scale data.
-
-**Voting Classifier**: An ensemble model that combines Logistic Regression, Decision Tree, and Support Vector Machine (SVM) classifiers. This approach leverages the strengths of different algorithms to make predictions.
-
-
-### 4.3.2 Classifier Performance
-
-Each model was trained using its optimal hyperparameters on the SMOTE-augmented training data. This approach ensures that the models are well-tuned and robust to class imbalance.
-
+### 5.3.2 Classifier Performance
 
 ```{r}
 library(knitr)
@@ -296,11 +246,13 @@ performance_rounded %>%
 
 Table 1: Performance Comparison Between Classifiers.
 
+Table 1 presents a performance comparison between the Gradient Boosting, Light GBM, and Voting Classifiers. For a detailed view of the confusion matrices for each model, please refer to Appendix B.
+
 All three models demonstrate high accuracy, with scores above 0.86, indicating strong overall predictive capability for kidney stone occurrence. However, note that it is not a very balanced dataset, so the accuracy alone is not the good metric to consider. The ROC AUC scores are lower than might be expected given the high accuracy scores, ranging from 0.5858 to 0.6313. This discrepancy could indicate that while the models are good at classifying the majority of cases, they might struggle with some harder-to-distinguish instances.
 
 Specifically, **LightGBM Classifier** slightly outperforms the other models across most metrics. This suggests that **LightGBM** is particularly effective at capturing the underlying patterns in our dataset. **Gradient Boosting** shows very similar performance , with only marginal differences across ROC AUC. 
 
-## 4.4 Interpretation of Model Results
+## 5.4 Interpretation of Model Results
 
 ```{r}
 knitr::include_graphics("../../EDA/figures/shap_beeswarm_plot_top10_small.pdf")
@@ -308,45 +260,35 @@ knitr::include_graphics("../../EDA/figures/shap_beeswarm_plot_top10_small.pdf")
 
 Figure 7: Top 10 Predictors of Kidney Stone Risk: Impact and Distribution (SHAP Summary Plot)
 
-The beeswarm plot visualizes the distribution of SHAP values for each feature across all samples, revealing the magnitude and direction of a feature's impact on model predictions.
+The beeswarm plot illustrates SHAP values for each feature, showing their impact on model predictions. Gallstones and age generally increase kidney stone likelihood, with age showing a positive correlation. Non-Hispanic Black ethnicity indicates reduced risk, while Non-Hispanic White suggests increased risk.
+Dietary factors show varied impacts: short-chain saturated fatty acids and vitamin A have wide-ranging effects, while very long-chain polyunsaturated fatty acids suggest a potential protective effect. Abdominal pain is a significant predictor, and the albumin creatinine ratio shows variable impact across patients.
 
-For gallstones, the predominantly positive SHAP values (red points) indicate an increased likelihood of kidney stones, though the impact varies across cases. Age demonstrates a positive trend, with higher SHAP values at increased ages, suggesting elevated risk with aging.
+To understand how these factors interact in individual cases, we'll examine a specific instance demonstrating the complex interplay between different risk factors.
 
-Interestingly, Non-Hispanic Black shows largely negative SHAP values, indicating a reduced risk, while Non-Hispanic White displays mainly positive values, suggesting an increased risk. 
-
-Among dietary predictors, short-chain saturated fatty acids (SFA 6:0 and 12:0) and vitamin A exhibit wide-ranging impacts, with both positive and negative SHAP values, indicating their effect may be modulated by other factors. Very long-chain polyunsaturated fatty acids (PFA 20:4) lean towards negative values, suggesting a potential protective effect.
-
-Abdominal pain's primarily positive SHAP values underscore its clinical significance in predicting kidney stones. The albumin creatinine ratio's broad SHAP value distribution points to a variable impact, likely influenced by individual patient characteristics.
-
-
-```{r, fig.width=12, fig.height=8, fig.align="center"}
+```{r, out.height="120%", out.align="center"}
 knitr::include_graphics("../../EDA/figures/shap_force_plot_instance_3_zoomed.pdf")
 ```
 
 Figure 8: Individual Risk Factor Analysis for Kidney Stone Formation (SHAP Force Plot)
 
-This SHAP force plot illustrates the impact of two variables on the model's prediction for a specific instance, with the final prediction f(x) of 0.30 being greater than the base value. This positive difference indicates that for this particular case, the combined effect of the variables increases the prediction above the average model output. The plot highlights MCQ550 (history of gallstones) with a substantial negative impact of -1.9567, suggesting that a history of gallstones significantly lowers the prediction. Conversely, DR1TLZ (Lutein + Zeaxanthin intake in mcg) shows a positive influence of 1.1256, partially offsetting the negative effect of gallstones. The interplay between these factors results in a net positive effect, pushing the final prediction above the base value. This suggests that while a history of gallstones tends to decrease the predicted outcome, higher intake of Lutein and Zeaxanthin mitigates this effect to some extent, ultimately leading to a prediction that is higher than the model's average output for the population.
+In this case, the model's final prediction f(x) is 0.30, which is greater than the base value. This positive difference indicates that for this specific patient, the combined effect of the variables increases the predicted risk above the average model output.
+
+The plot highlights two key variables, MCQ550 (history of gallstones) shows a substantial negative impact of -1.9567, suggesting that for this individual, a history of gallstones significantly lowers the predicted risk of kidney stones. On the other hands, DR1TLZ (Lutein + Zeaxanthin intake in mcg) demonstrates a positive influence of 1.1256, partially offsetting the negative effect of gallstones.
+
+The interplay between these factors results in a net positive effect, pushing the final prediction above the base value. This example illustrates how factors that may have a general trend in the population (such as gallstones typically increasing risk) can have different effects in individual cases, and how dietary factors like Lutein and Zeaxanthin intake can modulate the overall risk.
 
 
-# 5. Conclusions and Recommendations
-
-## 5.1 Conclusions
+# 6. Conclusions, Recommendation and Limitations
+## 6.1 Conclusions
 Our kidney stone prediction model successfully identified several key factors associated with increased risk of kidney stone formation. These include age, race (particularly Non-Hispanic White), presence of certain health conditions (high blood pressure, gallstones), body mass index, and specific biochemical markers (albumin-creatinine ratio).
 
 Dietary factors, including intake of certain fatty acids (e.g., SFA 6:0 Hexanoic) and vitamins (particularly Vitamin A), play a complex role in kidney stone risk, with their effects not always being straightforward.
 
-The model also demonstrates the multifactorial nature of kidney stone risk, incorporating demographic, health, dietary, and biochemical factors to provide a comprehensive risk assessment.
+## 6.2 Recommendations
+Patient at risks should be more educated about the importance of modifiable risk factors, particularly hydration and dietary choices. The protective effect of adequate fluid intake should be a key message. Healthcare systems should also consider implementing screening programs for kidney stone risk, especially for individuals with identified high-risk factors such as high blood pressure or gallstone.
 
-## 5.2 Recommendations
-
-Healthcare providers should consider using multifactorial risk assessment tools, like our model, to identify individuals at high risk of kidney stones. This could enable more targeted preventive strategies. Patient education should emphasize the importance of modifiable risk factors, particularly hydration and dietary choices. The protective effect of adequate fluid intake should be a key message. Healthcare systems should also consider implementing screening programs for kidney stone risk, especially for individuals with identified high-risk factors such as high blood pressure or gallstones.
-
-## 5.3 Limitations
-
-The model is based on cross-sectional data from the NHANES survey, which limits our ability to establish causal relationships or track risk factors over time.
-While our model incorporates a wide range of factors, it may not capture all possible influences on kidney stone formation, such as genetic predisposition or certain environmental factors.
-The model's performance may vary across different populations not well-represented in the NHANES dataset.
-Some of the relationships identified, such as the impact of specific fatty acids or vitamins, require further research to fully understand their mechanisms of influence on kidney stone formation.
+## 6.3 Limitations
+The model is based on cross-sectional data from the NHANES survey, which limits our ability to establish track risk factors over time. While our model incorporates a wide range of factors, it may not capture all possible influences on kidney stone formation, such as genetic predisposition or certain environmental factors. The model's performance may vary across different populations not well-represented in the NHANES dataset.
 
 # 6. References
 
@@ -424,14 +366,16 @@ Some of the relationships identified, such as the impact of specific fatty acids
 
 &nbsp;&nbsp;&nbsp;&nbsp;Winitzki, D., Zacharias, H. U., Nadal, J., Baid-Agrawal, S., Schaeffner, E., Schmid, M., Busch, M., Bergmann, M. M., Schultheiss, U., Kotsis, F., Stockmann, H., Meiselbach, H., Wolf, G., Krane, V., Sommerer, C., Eckardt, K.-U., Schneider, M. P., Schlieper, G., Floege, J., & Saritas, T. (2022). Educational Attainment Is Associated With Kidney and Cardiovascular Outcomes in the German CKD (GCKD) Cohort. Kidney International Reports, 7(5). https://doi.org/10.1016/j.ekir.2022.02.001
 
- Xue, W., Xue, Z., Liu, Y., Yin, P., Liu, L., Qu, S., Wu, S., & Yang, C. (2024). Is Kidney Stone Associated with Thyroid Disease? The United States National Health and Nutrition Examination Survey 2007–2018. Endocrine, Metabolic & Immune Disorders, 24(11). https://doi.org/10.2174/0118715303268738231129093935
+&nbsp;&nbsp;&nbsp;&nbsp;Xue, W., Xue, Z., Liu, Y., Yin, P., Liu, L., Qu, S., Wu, S., & Yang, C. (2024). Is Kidney Stone Associated with Thyroid Disease? The United States National Health and Nutrition Examination Survey 2007–2018. Endocrine, Metabolic & Immune Disorders, 24(11). https://doi.org/10.2174/0118715303268738231129093935
 
 &nbsp;&nbsp;&nbsp;&nbsp;Yencilek, E., Yencilek, F., Ozcan, C., Demirel, A., Coskun, S., & Basaran, M. (2010). The effect of lycopene on the kidney stones: a preliminary study. Urological Research, 38(4). 
+
+&nbsp;&nbsp;&nbsp;&nbsp;Singh, P., Harris, P. C., Sas, D. J., & Lieske, J. C. (2022). The genetics of kidney stone disease and nephrocalcinosis. Nature Reviews Nephrology, 18(4), 224-240.
 
 \newpage
 
 # Appendices
-## Appendix A: Confusion Matrix Comparison
+## Appendix A: Detailed Model Performance Metrics
 
 Table A1: Confusion Matrix comparison of Gradient Boosting, Light GBM and Voting Classifiers.
 
