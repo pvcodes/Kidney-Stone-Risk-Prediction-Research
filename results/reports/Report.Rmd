@@ -1,11 +1,11 @@
 ---
-title: "Predicting Occurance of Kidney Stones: Exploratory Data Analysis of Relevant Features in NHANES 2017 - 2020"
+title: "Predicting Occurance of Kidney Stones in NHANES 2017 - 2020"
 author: |
   | David Nguyen 300584723 (Individual)
   |
-  | [Github](https://github.com/dvnguyen02/KStoneClassifierML)
+  | [Individial Github Repository](https://github.com/dvnguyen02/KStoneClassifierML)
   |
-  | Group members
+  | [Group 2 Github Repository](https://github.com/dvnguyen02/DATA301-Project.git)
   | Katie Chu-Fong 300601174; Thinh Nguyen 300611544;
   | Brook Thomson 300653729
 date: "`r Sys.Date()`"
@@ -16,13 +16,14 @@ output:
 # Executive Summary
 
 Kidney stones affect approximately 10% of people in their lifetime, causing severe pain and potentially leading to serious complications. Our research aimed to develop a predictive model to identify individuals at high risk for kidney stone formation, using data from the National Health and Nutrition Examination Survey.
+
 We analyzed various factors and found that several key elements are strongly associated with an increased risk of kidney stones: High blood pressure, Gender (being female), Saturated fatty acid intake (particularly dodecanoic acid), Abdominal pain history, Vitamin A intake, Age, Race (particularly non-Hispanic White and non-Hispanic Black), History of gallstones
 
-Our predictive model demonstrated strong performance in identifying individuals at risk for kidney stones. Importantly, the model revealed that risk factors can vary significantly between individuals. For example, high blood pressure emerged as the most significant risk factor, while certain dietary elements like saturated fatty acid intake also played a crucial role.
+Our predictive model demonstrated strong performance in identifying individuals at risk for kidney stones. Importantly, the model revealed that risk factors can vary significantly between individuals. For example, high blood pressure emerged as one of the most significant risk factor, while certain dietary elements like saturated fatty acid intake also played a crucial role.
 
 These findings highlight the complex nature of kidney stone formation and underscore the importance of personalized risk assessment. By leveraging these insights, healthcare providers can implement targeted preventive measures, potentially reducing the incidence of kidney stones, improving patient outcomes, and decreasing healthcare costs associated with treatment and complications.
 
-Additionally, we recommend implementing targeted screening programs and patient education focusing on modifiable risk factors, especially blood pressure management and personalized dietary recommendations. While our model is promising, further research is needed to fully understand kidney stone formation mechanisms and refine predictive models, particularly regarding the interplay between physiological conditions and dietary factors across diverse populations.
+Additionally, we recommend implementing targeted screening programs and patient education focusing on modifiable risk factors. While our model is promising, further research is needed to fully understand kidney stone formation mechanisms and refine predictive models, particularly regarding the interplay between physiological conditions and dietary factors across diverse populations.
 
 \newpage
 \tableofcontents
@@ -212,7 +213,7 @@ We chose these models for their complementary strengths:
 
 Gradient Boosting is know for effective for handling complex interactions and non-linear relationships in medical data. LightGBM is chosen for its efficiency with large datasets and ability to handle categorical features directly. Voting Classifier, an ensemble model that combines Logistic Regression, Decision Tree, and Support Vector Machine (SVM) classifiers. This approach leverages the strengths of different algorithms to make predictions.
 
-### 5.3.2 Classifier Performance
+### 5.3.2 Models Evaluation
 
 ```{r}
 library(knitr)
@@ -246,11 +247,7 @@ performance_rounded %>%
 
 Table 1: Performance Comparison Between Classifiers.
 
-Table 1 presents a performance comparison between the Gradient Boosting, Light GBM, and Voting Classifiers. For a detailed view of the confusion matrices for each model, please refer to Appendix B.
-
-All three models demonstrate high accuracy, with scores above 0.86, indicating strong overall predictive capability for kidney stone occurrence. However, note that it is not a very balanced dataset, so the accuracy alone is not the good metric to consider. The ROC AUC scores are lower than might be expected given the high accuracy scores, ranging from 0.5858 to 0.6313. This discrepancy could indicate that while the models are good at classifying the majority of cases, they might struggle with some harder-to-distinguish instances.
-
-Specifically, **LightGBM Classifier** slightly outperforms the other models across most metrics. This suggests that **LightGBM** is particularly effective at capturing the underlying patterns in our dataset. **Gradient Boosting** shows very similar performance , with only marginal differences across ROC AUC. 
+The performance metrics of our three classifiers - Gradient Boosting, LightGBM, and Voting Classifier - are presented in Table 1, with detailed confusion matrices available in Appendix B. All models exhibit high accuracy (>0.86), suggesting strong predictive capability for kidney stone occurrence. However, given the imbalanced nature of our dataset, accuracy alone is insufficient for comprehensive evaluation. The ROC AUC scores, ranging from 0.5858 to 0.6313, are lower than expected, indicating potential difficulties in distinguishing more nuanced cases despite good overall classification. LightGBM marginally outperforms the other models across most metrics, suggesting its effectiveness in capturing underlying patterns in our dataset. Gradient Boosting shows comparable performance, with only slight differences in ROC AUC. These results highlight the models' strengths in general classification while also revealing areas for potential improvement in handling more challenging instances.
 
 ## 5.4 Interpretation of Model Results
 

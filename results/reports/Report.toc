@@ -19,7 +19,7 @@
 \contentsline {subsubsection}{5.2.2 Data Augmentation}{10}{section*.20}%
 \contentsline {subsection}{5.3 Model Development}{10}{section*.21}%
 \contentsline {subsubsection}{5.3.1 Model Selection}{10}{section*.22}%
-\contentsline {subsubsection}{5.3.2 Classifier Performance}{10}{section*.23}%
+\contentsline {subsubsection}{5.3.2 Models Evaluation}{10}{section*.23}%
 \contentsline {subsection}{5.4 Interpretation of Model Results}{11}{section*.24}%
 \contentsline {section}{6. Conclusions, Recommendation and Limitations}{12}{section*.25}%
 \contentsline {subsection}{6.1 Conclusions}{12}{section*.26}%
