@@ -1,5 +1,5 @@
 ---
-title: "Predicting Occurance of Kidney Stones in NHANES 2017 - 2020"
+title: "Ensemble Learning Approaches For Predicting Occurance of Kidney Stones in NHANES 2017 - 2020"
 author: |
   | David Nguyen 300584723 (Individual)
   |
@@ -57,8 +57,8 @@ The target variable belongs to the Questionnaire component of NHANES, and is phr
 
 Counts (and proportions) of the binary target variable classes are as follows:
 
-* Yes, has had kidney stones: 866 instances (`r signif((sum(df$KIQ026 == 1)/nrow(df)), 4)`)
-* No, has not had kidney stones: 8342 instances (`r signif(sum(df$KIQ026 == 2)/nrow(df), 4)`)
+* Yes, has had kidney stones: 866 instances (`r signif((sum(df$KIQ026 == 1)/nrow(df)), 2)*100`%)
+* No, has not had kidney stones: 8342 instances (`r signif(sum(df$KIQ026 == 2)/nrow(df), 4)*100`%)
 
 The key features are broadly described in the following:
 
@@ -202,18 +202,16 @@ In our initial training set, we observed a significant class imbalance, with 6,4
 
 To mitigate this issue, we employed the **Synthetic Minority Over-sampling Technique (SMOTE)**. SMOTE works by creating synthetic examples of the minority class, effectively increasing its representation in the dataset without simply duplicating existing instances. Post-SMOTE, our training set achieved balance with 5,818 records in each class, resulting in a total of 11,636 records. With equal representation of both classes, our models can learn patterns associated with kidney stone presence more effectively.
 
-For a visual representation of the data distribution before and after SMOTE balancing, please refer to Appendix A.
+For a visual representation of the data distribution before and after SMOTE balancing, please refer to Appendix C.
 
 
 ## 5.3 Model Development
 
-### 5.3.1 Model Selection
+### 5.3 Model Selection Evaluation
 
 We chose these models for their complementary strengths:
 
 Gradient Boosting is know for effective for handling complex interactions and non-linear relationships in medical data. LightGBM is chosen for its efficiency with large datasets and ability to handle categorical features directly. Voting Classifier, an ensemble model that combines Logistic Regression, Decision Tree, and Support Vector Machine (SVM) classifiers. This approach leverages the strengths of different algorithms to make predictions.
-
-### 5.3.2 Models Evaluation
 
 ```{r}
 library(knitr)
@@ -247,9 +245,9 @@ performance_rounded %>%
 
 Table 1: Performance Comparison Between Classifiers.
 
-The performance metrics of our three classifiers - Gradient Boosting, LightGBM, and Voting Classifier - are presented in Table 1, with detailed confusion matrices available in Appendix B. All models exhibit high accuracy (>0.86), suggesting strong predictive capability for kidney stone occurrence. However, given the imbalanced nature of our dataset, accuracy alone is insufficient for comprehensive evaluation. The ROC AUC scores, ranging from 0.5858 to 0.6313, are lower than expected, indicating potential difficulties in distinguishing more nuanced cases despite good overall classification. LightGBM marginally outperforms the other models across most metrics, suggesting its effectiveness in capturing underlying patterns in our dataset. Gradient Boosting shows comparable performance, with only slight differences in ROC AUC. These results highlight the models' strengths in general classification while also revealing areas for potential improvement in handling more challenging instances.
+The performance metrics of our three classifiers - Gradient Boosting, LightGBM, and Voting Classifier - are presented in Table 1, with detailed confusion matrices available in Appendix A. All models exhibit high accuracy (>0.86), suggesting strong predictive capability for kidney stone occurrence. However, given the imbalanced nature of our dataset, accuracy alone is insufficient for comprehensive evaluation. The ROC AUC scores, ranging from 0.5858 to 0.6313, are lower than expected, indicating potential difficulties in distinguishing more nuanced cases despite good overall classification. LightGBM marginally outperforms the other models across most metrics, suggesting its effectiveness in capturing underlying patterns in our dataset. Gradient Boosting shows comparable performance, with only slight differences in ROC AUC. These results highlight the models' strengths in general classification while also revealing areas for potential improvement in handling more challenging instances.
 
-## 5.4 Interpretation of Model Results
+## 5.4 Interpretation of Model Results 
 
 ```{r}
 knitr::include_graphics("../../EDA/figures/shap_beeswarm_plot_top10_small.pdf")
@@ -274,6 +272,11 @@ The plot highlights two key variables, MCQ550 (history of gallstones) shows a su
 
 The interplay between these factors results in a net positive effect, pushing the final prediction above the base value. This example illustrates how factors that may have a general trend in the population (such as gallstones typically increasing risk) can have different effects in individual cases, and how dietary factors like Lutein and Zeaxanthin intake can modulate the overall risk.
 
+## 5.5 Estimates Of Risk Behind The Models
+
+The NHANES dataset, while comprehensive, may not be fully representative of all demographics. Certain populations might be under-represented, potentially skewing our predictions (i.e Non-Hispanic in SHAP feature importance). In addition, some predictors, particularly dietary intake measures, rely on self-reporting, which can be subject to recall bias. The dataset is also cross-sectional, capturing a snapshot in time. This limits our ability to infer causal relationships or account for how risk factors might change over time.
+
+While we've used ensemble methods to reduce potential bias, our models may still have inherent biases. For example, the high accuracy but lower ROC AUC scores suggest our models might be overfitting to certain patterns in the majority class. In addition, SMOTE helped address class imbalance, it generates synthetic examples but may not represent real-world data distributions.
 
 # 6. Conclusions, Recommendation and Limitations
 ## 6.1 Conclusions
