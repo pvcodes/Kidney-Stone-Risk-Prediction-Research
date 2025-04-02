@@ -6,8 +6,6 @@
 
 [Group 2 Github Repository](https://github.com/dvnguyen02/DATA301-Project.git)
 
-**Team:** Katie Chu-Fong 300601174; Thinh Nguyen 300611544; Brook Thomson 300653729
-
 ## Executive Summary
 
 Kidney stones affect approximately 10% of people in their lifetime, causing severe pain and potentially leading to serious complications. Our research aimed to develop a predictive model to identify individuals at high risk for kidney stone formation, using data from the National Health and Nutrition Examination Survey.
