@@ -1,11 +1,5 @@
 # Ensemble Learning Approaches For Predicting Occurrence of Kidney Stones in NHANES 2017 - 2020
 
-**Author:** David Nguyen 300584723 (Individual)
-
-[Individual Github Repository](https://github.com/pvcodes/Kidney-Stone-Risk-Prediction-Research)
-
-[Group 2 Github Repository](https://github.com/dvnguyen02/DATA301-Project.git)
-
 ## Executive Summary
 
 Kidney stones affect approximately 10% of people in their lifetime, causing severe pain and potentially leading to serious complications. Our research aimed to develop a predictive model to identify individuals at high risk for kidney stone formation, using data from the National Health and Nutrition Examination Survey.
