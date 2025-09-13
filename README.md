@@ -2,7 +2,7 @@
 
 **Author:** David Nguyen 300584723 (Individual)
 
-[Individual Github Repository](https://github.com/dvnguyen02/KStoneClassifierML)
+[Individual Github Repository](https://github.com/pvcodes/Kidney-Stone-Risk-Prediction-Research)
 
 [Group 2 Github Repository](https://github.com/dvnguyen02/DATA301-Project.git)
 
